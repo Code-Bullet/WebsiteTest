@@ -47,10 +47,15 @@ function setup() {
 
     var elements = document.getElementsByTagName("BUTTON");
     var element = select('button');
-    element.touchStarted(onclick);
-    
+    element.touchStarted(fuckOff);
+
     // .touchStarted(onclick);
 
+
+}
+
+function fuckOff(){
+    pause =  true;
 
 }
 
