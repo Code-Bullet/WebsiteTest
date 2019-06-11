@@ -56,7 +56,7 @@ function setup() {
 
 function fuckOff(){
     pause =  true;
-
+    clickedHamburger()
 }
 
 function setBlocks(){
