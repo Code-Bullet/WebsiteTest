@@ -28,8 +28,6 @@ function preload() {
 function setup() {
 
 
-
-
     window.canvas = createCanvas(windowWidth, windowHeight);
     canvas.position(0, 0);
     window.canvas.style('z-index', 1);
@@ -55,29 +53,30 @@ function setup() {
 
 
 }
-function clickedBody(){
+
+function clickedBody() {
     window.onclick();
 }
-function fuckOff(){
+
+function fuckOff() {
     clickedHamburger()
 }
 
-function setBlocks(){
+function setBlocks() {
 
-    let testBlockSize =1;
-    while(true){
-        if(floor(canvas.width/testBlockSize)* floor(canvas.height/testBlockSize)<maxBlocks){
+    let testBlockSize = 1;
+    while (true) {
+        if (floor(canvas.width / testBlockSize) * floor(canvas.height / testBlockSize) < maxBlocks) {
 
 
             blockSize = testBlockSize;
-            blocksX = floor(canvas.width/blockSize) - floor(canvas.width/blockSize)%2;
-            blocksY = floor(canvas.height/blockSize)- floor(canvas.height/blockSize)%2;
+            blocksX = floor(canvas.width / blockSize) - floor(canvas.width / blockSize) % 2;
+            blocksY = floor(canvas.height / blockSize) - floor(canvas.height / blockSize) % 2;
             return;
-        }else{
+        } else {
             testBlockSize++;
         }
     }
-
 
 
 }
@@ -100,21 +99,34 @@ function draw() {
         fill(255);
         noStroke();
         textSize(100);
-        let newImageWidth = canvas.width - 2 * xOffset;
-        newImageWidth *= 0.6;
-        let widthRatio = newImageWidth / welcomeText.width;
-        let newImageHeight = welcomeText.height * widthRatio;
-        image(welcomeText, canvas.width / 2 - newImageWidth / 2, canvas.height / 2 - newImageHeight / 2, newImageWidth, newImageHeight);
-        fill(20,230);
-        rect(canvas.width / 2 - newImageWidth / 2, canvas.height / 2 - newImageHeight / 2, newImageWidth, newImageHeight)
+        if (canvas.width > 700) {
 
 
+            let newImageWidth = canvas.width - 2 * xOffset;
+            newImageWidth *= 0.6;
+            let widthRatio = newImageWidth / welcomeText.width;
+            let newImageHeight = welcomeText.height * widthRatio;
+            image(welcomeText, canvas.width / 2 - newImageWidth / 2, canvas.height / 2 - newImageHeight / 2, newImageWidth, newImageHeight);
+            fill(20, 230);
+            rect(canvas.width / 2 - newImageWidth / 2, canvas.height / 2 - newImageHeight / 2, newImageWidth, newImageHeight)
+
+        }
 
         fill(15);
         rect(0, 0, width, yOffset);
         rect(0, 0, xOffset, height);
         rect(width, height, -width, -yOffset);
         rect(width, height, -xOffset, -height);
+        if (canvas.width > 700) {
+            push();
+            fill(255, 80);
+            stroke(255, 80);
+            noStroke();
+            textSize(blockSize*0.6);
+            textAlign(LEFT, CENTER);
+            text("*Objectively False", 20, canvas.height - 30);
+            pop();
+        }
         push();
         translate(xOffset, yOffset);
 
@@ -143,14 +155,7 @@ function draw() {
             // }
         }
         pop();
-        push();
-        fill(255,80);
-        stroke(255,80);
-        noStroke();
-        textSize(20);
-        textAlign(LEFT,CENTER);
-        text("*Objectively False",20, canvas.height-30);
-        pop();
+
 
     }
 }
@@ -193,9 +198,9 @@ function keyPressed() {
 
 }
 
-function keyReleased(){
+function keyReleased() {
     switch (key) {
         case ' ':
-            speedMultiplier =1;
+            speedMultiplier = 1;
     }
 }
