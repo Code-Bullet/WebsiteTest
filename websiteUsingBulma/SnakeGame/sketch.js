@@ -26,7 +26,7 @@ function preload() {
 }
 
 function setup() {
-    window.canvas = createCanvas(windowWidth, windowHeight);
+    window.canvas = createCanvas(windowWidth/3, windowHeight/3);
     canvas.position(0, 0);
     window.canvas.style('z-index', 1);
     setBlocks();
