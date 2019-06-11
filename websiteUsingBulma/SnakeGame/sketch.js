@@ -48,14 +48,17 @@ function setup() {
     var elements = document.getElementsByTagName("BUTTON");
     var element = select('button');
     element.touchStarted(fuckOff);
+    element = select("body");
+    element.touchStarted(clickedBody);
 
     // .touchStarted(onclick);
 
 
 }
-
+function clickedBody(){
+    window.onclick();
+}
 function fuckOff(){
-    pause =  true;
     clickedHamburger()
 }
 
