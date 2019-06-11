@@ -26,11 +26,14 @@ function preload() {
 }
 
 function setup() {
-    window.canvas = createCanvas(windowWidth/3, windowHeight/3);
+
+
+
+
+    window.canvas = createCanvas(windowWidth, windowHeight);
     canvas.position(0, 0);
     window.canvas.style('z-index', 1);
     setBlocks();
-
     blockSize = min(width / blocksX, height / blocksY);
     outlineLength = blockSize / 15;
     xOffset = (width - blockSize * blocksX) / 2.0;
@@ -41,6 +44,14 @@ function setup() {
     hc = new HamiltonianCycle(blocksX, blocksY);
     s.resetOnHamiltonian(hc.cycle);
     frameRate(30);
+
+    var elements = document.getElementsByTagName("BUTTON");
+    var element = select('button');
+    element.touchStarted(onclick);
+    
+    // .touchStarted(onclick);
+
+
 }
 
 function setBlocks(){
