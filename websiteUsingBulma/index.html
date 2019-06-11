@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.0/css/bulma.min.css">
+<!--    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css" integrity="sha256-gsmEoJAws/Kd3CjuOQzLie5Q3yshhvmo7YNtBG7aaEY=" crossorigin="anonymous">
+
+    <!--    Snake Game Stuff-->
+    <script language="javascript" type="text/javascript" src="SnakeGame/libraries/p5.js"></script>
+    <script language="javascript" src="SnakeGame/libraries/p5.dom.js"></script>
+    <script language="javascript" src="SnakeGame/libraries/p5.sound.js"></script>
+    <script language="javascript" type="text/javascript" src="SnakeGame/sketch.js"></script>
+    <script language="javascript" type="text/javascript" src="SnakeGame/Snake.js"></script>
+    <script language="javascript" type="text/javascript" src="SnakeGame/Apple.js"></script>
+    <!--  <script language="javascript" type="text/javascript" src="SnakeGame/Path.js"></script>-->
+    <script language="javascript" type="text/javascript" src="SnakeGame/HamiltonianCycle.js"></script>
+
+
+    <!--Debugger-->
+<!--            <link rel="stylesheet" href="styles/debug.css">-->
+    <title>Title</title>
+
+    <style>
+
+        @font-face {
+            font-family: "bebas";
+            src: url("fonts/bebas_neue/BebasNeue-Regular.ttf");
+        }
+        @font-face {
+            font-family: "montserrat-bold";
+            src: url("fonts/montserrat/Montserrat-Bold.otf");
+        }
+        @font-face {
+            font-family: "montserrat";
+            src: url("fonts/montserrat/Montserrat-Regular.otf");
+        }
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+        html { overflow-y: hidden; }
+        body {
+            background: #141414;
+            z-index:0;
+
+            /*background: #343434 url("images/snakeBackground.gif");*/
+            /*background-size: cover;*/
+        }
+
+        .navBar {
+            z-index: 2;
+            display: grid;
+            grid-template-columns: [start] 1.5fr [logo-end] 2.5fr [menu-start] 2fr [menu-end] 3fr [social-start] 1fr [social-end];
+            grid-template-rows: 60px;
+            padding: 1em;
+            color: white;
+            /*background: rgba(0, 0, 0, 0.2);*/
+            font-family: montserrat;
+        }
+
+        .logo {
+            z-index: 2;
+            align-self: center;
+            padding-left: 1em;
+            padding-top: 1em;
+            width:300px;
+        }
+
+        .menuItems {
+            z-index: 2;
+            grid-column: menu-start/menu-end;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            align-content: center;
+            justify-content: center;
+            font-family: montserrat;
+            font-size: larger;
+
+        }
+        .menuItems > div{
+            padding-right: 1em;
+            z-index: 2;
+            opacity: 0.8;
+            justify-self:center;
+            align-self: center;
+            text-align: center;
+
+            font-family:montserrat;
+            transition: font-family 0.2s ;
+            transition: opacity 0.2s;
+
+        }
+        .menuItems > div.active{
+            z-index: 2;
+            font-family: montserrat-bold, sans-serif;
+            opacity: 1;
+        }
+
+        .hamburgerButton{
+            display:none;
+            background: none;
+            outline: none;
+            border: none;
+            z-index: 2;
+            grid-column: menu-start/menu-end;
+            justify-self: end;
+            align-self: center;
+            padding-right: 1em;
+        }
+        .menuItems > div:hover{
+            z-index: 2;
+            /*font-size: 110%;*/
+            font-family:montserrat-bold;
+            transition: font-family 0.2s ;
+            opacity: 1;
+            transition: opacity 0.2s;
+        }
+
+        .socials {
+            z-index: 2;
+            grid-column: social-start/social-end;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            align-content: center;
+            justify-content: center;
+        }
+
+        .socials > div{
+            z-index: 2;
+            padding-right: 1em;
+        }
+
+        /*TOOL TIPS*/
+        .tooltip {
+            z-index: 2;
+            position: relative;
+            display: inline-block;
+
+        }
+
+        .tooltip .tooltiptext {
+            z-index: 2;
+            visibility: hidden;
+            width: 120px;
+
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 2px 0;
+            position: absolute;
+            z-index: 1;
+            top: 80%;
+            left: 50%;
+            margin-left: -60px;
+
+            /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+            opacity: 0;
+            transition: opacity 1s;
+        }
+
+        .tooltip:hover .tooltiptext {
+            z-index: 2;
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .basicFooter {
+            z-index: 2;
+            position:fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            color: white;
+            text-align: left;
+            padding: 1em;
+        }
+        a {
+            color: inherit;
+            text-underline-mode: inherit;
+            text-decoration-color: inherit;
+            font-family: inherit;
+            font-size: inherit;
+        }
+        a:hover{
+            color: inherit;
+            text-underline-mode: inherit;
+            text-decoration-color: inherit;
+            font-family: inherit;
+            font-size: inherit;
+        }
+
+
+        @media screen and (max-width: 1600px){
+            /*For Mobile only*/
+            .logo {
+                width:250px;
+                align-self: center;
+
+
+            }
+
+            .navBar {
+                grid-template-columns: [start] 1fr [logo-end] 1fr [menu-start] 1fr [menu-end];
+                grid-template-rows: repeat(2,40px);
+            }
+
+            .socials{
+                position: fixed;
+                right :0;
+                bottom: 0;
+                padding: 1em;
+                /*grid-column: menu-start/menu-end;*/
+                /*grid-row: top-footer/bottom-footer;*/
+            }
+
+            .tooltip .tooltiptext {
+                top: -100%;
+            }
+
+        }
+
+
+        @media screen and (max-width: 700px){
+                /*For Mobile only*/
+            .logo {
+                width:200px;
+            }
+            .menuItems{
+                /*background: rgba(255, 255, 255, 0.11);*/
+                display: none;
+                grid-row: 2;
+                /*grid-template-columns: 1fr;*/
+                padding-top: -1em;
+                align-self: center;
+                justify-self:start;
+            }
+            .menuItems > div{
+                /*align-self: flex-end;*/
+                /*justify-self:end;*/
+                justify-self: center;
+                align-self:center;
+                padding-right:0.7em;
+                text-align: right;
+
+            }
+
+            .hamburgerButton{
+                display: block;
+            }
+        }
+
+
+</style>
+
+    <script>
+        /* When the user clicks on the button,
+        toggle between hiding and showing the dropdown content */
+
+        let hamburgerClicked = false;
+
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(e) {
+            if(!hamburgerClicked && windowWidth<700){
+                var menuItems = document.getElementsByClassName("menuItems");
+                menuItems[0].style.display = "none";
+            }
+            hamburgerClicked = false;
+        };
+
+        function clickedHamburger(){
+
+                var menuItems = document.getElementsByClassName("menuItems");
+                if(menuItems[0].style.display==="grid")
+                    return;
+                menuItems[0].style.display = "grid";
+                hamburgerClicked = true;
+        }
+
+    </script>
+</head>
+<body>
+    <div class="navBar">
+
+        <div class="logo">
+            <img src="images/logo3.png" alt="TheBigCB.com">
+        </div>
+
+        <div class="menuItems">
+            <div class="active">
+                <a href="#home">Home</a>
+            </div>
+            <div>
+                <a href="#home">Projects</a>
+
+            </div>
+            <div>
+                <a href="#home">Merch</a>
+
+            </div>
+            <div>
+                <a href="#home">About</a>
+
+            </div>
+
+        </div>
+        <button class="hamburgerButton" onclick="clickedHamburger()">
+            <i class="fa fa-bars" style="font-size:24px;color:white"></i>
+        </button>
+
+        <div class="socials">
+            <div>
+                <a href="https://www.youtube.com/channel/UC0e3QhIYukixgh5VVpKHH9Q" >
+                    <div class="tooltip">
+                        <i class="fa fa-youtube-play" style="font-size:24px;color:white"></i>
+                        <span class="tooltiptext">YouTube</span>
+                    </div>
+                </a>
+            </div>
+            <div>
+                <a href="https://twitter.com/code_bullet" >
+                    <div class="tooltip">
+                        <i class="fa fa-twitter" style="font-size:24px;color:white"></i>
+                        <span class="tooltiptext">Twitter</span>
+                    </div>
+                </a>
+            </div>
+            <div>
+                <a href="https://discord.gg/qda75m8" >
+                    <div class="tooltip">
+                        <i class="fa fa-discord" style="font-size:24px;color:white"></i>
+                        <span class="tooltiptext">Discord</span>
+                    </div>
+                </a>
+            </div>
+            <div>
+                <a href="https://www.patreon.com/CodeBullet" >
+                    <div class="tooltip">
+                        <i class="fa fa-patreon" style="font-size:24px;color:white"></i>
+                        <span class="tooltiptext">Patreon</span>
+                    </div>
+                </a>
+            </div>
+            <div>
+                <a href="https://github.com/Code-Bullet" >
+                    <div class="tooltip">
+                        <i class="fa fa-github" style="font-size:24px;color:white"></i>
+                        <span class="tooltiptext">GitHub</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+<!--    <div class="basicFooter">-->
+<!--        *Objectively False-->
+<!--    </div>-->
+</body>
+</html>
