@@ -53,10 +53,10 @@ function setup() {
 
 
 }
-
-function clickedBody() {
-    window.onclick();
-}
+//
+// function clickedBody() {
+//     window.onclick();
+// }
 
 function fuckOff() {
     clickedHamburger()
@@ -87,7 +87,7 @@ function windowResized() {
     outlineLength = blockSize / 15;
     xOffset = (width - blockSize * blocksX) / 2.0;
     yOffset = (height - blockSize * blocksY) / 2.0;
-
+    onResize();
 }
 
 
@@ -119,10 +119,10 @@ function draw() {
         rect(width, height, -xOffset, -height);
         if (canvas.width > 700) {
             push();
-            fill(255, 80);
+            fill(255, 30);
             stroke(255, 80);
             noStroke();
-            textSize(blockSize*0.6);
+            textSize(blockSize*0.4);
             textAlign(LEFT, CENTER);
             text("*Objectively False", 20, canvas.height - 30);
             pop();
