@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.0/css/bulma.min.css">
+    <!--    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css"
+          integrity="sha256-gsmEoJAws/Kd3CjuOQzLie5Q3yshhvmo7YNtBG7aaEY=" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="styles/navBarStyle.css">
+
+
+    <script language="javascript" type="text/javascript" src="libraries/p5.js"></script>
+    <script language="javascript" src="libraries/p5.dom.js"></script>
+    <script language="javascript" src="libraries/p5.sound.js"></script>
+    <script language="javascript" type="text/javascript" src="pageJs/sketch.js"></script>
+
+    <!--Debugger-->
+    <!--            <link rel="stylesheet" href="styles/debug.css">-->
+    <title>Projects</title>
+
+    <style>
+
+        .mainContainer {
+            display: grid;
+            grid-template-columns: 1fr 5fr 1fr;
+            padding-top: 2em;
+            /*background: white;*/
+
+        }
+
+        .projectItems {
+            display: grid;
+            grid-column: 2;
+            grid-template-columns: 1fr 1fr 1fr;
+            align-content: center;
+            justify-content: center;
+            grid-gap: 2em;
+        }
+
+        .projectItems > div {
+            text-align: center;
+        }
+
+        .card {
+            background: #ffffff;
+        }
+
+        .content{
+
+
+        }
+        .title{
+         font-family: montserrat-bold;
+        }
+        @media screen and (max-width: 1600px) {
+            .projectItems {
+                grid-template-columns: 1fr 1fr;
+            }
+
+        }
+
+        @media screen and (max-width: 700px) {
+            .projectItems {
+                grid-template-columns: 1fr;
+
+            }
+            .content{
+
+                font-size: 80%;
+            }
+
+        }
+
+
+    </style>
+
+
+    <script>
+        /* When the user clicks on the button,
+        toggle between hiding and showing the dropdown content */
+
+        function setupElements() {
+            let hamburgerClicked = false;
+            var element = select('button');
+            element.touchStarted(clickedHamburger);
+            element = select("body");
+            element.touchStarted(clickedBody);
+        }
+
+
+        clickedBody = function (e) {
+            if (!hamburgerClicked && windowWidth < 700) {
+                var menuItems = document.getElementsByClassName("menuItems");
+                menuItems[0].style.display = "none";
+            }
+            hamburgerClicked = false;
+        };
+
+        function clickedHamburger() {
+            var menuItems = document.getElementsByClassName("menuItems");
+            if (menuItems[0].style.display === "grid")
+                return;
+            menuItems[0].style.display = "grid";
+            hamburgerClicked = true;
+        }
+
+        function onResize() {
+            var menuItems = document.getElementsByClassName("menuItems");
+            if (windowWidth > 700 && menuItems[0].style.display === "none") {
+
+                menuItems[0].style.display = "grid";
+            }
+        }
+
+    </script>
+
+</head>
+<body>
+<div class="navBar">
+
+    <div class="logo">
+        <img src="images/GlowingLogoWithName.png" alt="TheBigCB.com">
+    </div>
+
+    <div class="menuItems">
+        <div class="active">
+            <a href="#home">Home</a>
+        </div>
+        <div>
+            <a href="#home">Projects</a>
+
+        </div>
+        <div>
+            <a href="#home">Merch</a>
+
+        </div>
+        <div>
+            <a href="#home">About</a>
+
+        </div>
+
+    </div>
+    <button class="hamburgerButton" onclick="">
+        <i class="fa fa-bars" style="font-size:24px;color:white"></i>
+    </button>
+
+    <div class="socials">
+        <div>
+            <a href="https://www.youtube.com/channel/UC0e3QhIYukixgh5VVpKHH9Q">
+                <div class="tooltip">
+                    <i class="fa fa-youtube-play" style="font-size:24px;color:white"></i>
+                    <span class="tooltiptext">YouTube</span>
+                </div>
+            </a>
+        </div>
+        <div>
+            <a href="https://twitter.com/code_bullet">
+                <div class="tooltip">
+                    <i class="fa fa-twitter" style="font-size:24px;color:white"></i>
+                    <span class="tooltiptext">Twitter</span>
+                </div>
+            </a>
+        </div>
+        <div>
+            <a href="https://discord.gg/qda75m8">
+                <div class="tooltip">
+                    <i class="fa fa-discord" style="font-size:24px;color:white"></i>
+                    <span class="tooltiptext">Discord</span>
+                </div>
+            </a>
+        </div>
+        <div>
+            <a href="https://www.patreon.com/CodeBullet">
+                <div class="tooltip">
+                    <i class="fa fa-patreon" style="font-size:24px;color:white"></i>
+                    <span class="tooltiptext">Patreon</span>
+                </div>
+            </a>
+        </div>
+        <div>
+            <a href="https://github.com/Code-Bullet">
+                <div class="tooltip">
+                    <i class="fa fa-github" style="font-size:24px;color:white"></i>
+                    <span class="tooltiptext">GitHub</span>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="mainContainer">
+    <div class="projectItems">
+
+        <div class="card">
+
+            <div class="card-image">
+                <figure class="image is-4by3">
+                    <img src="images/Projects/chess.png" height="960" width="1280"/>
+                </figure>
+            </div>
+            <div class="card-content">
+                <p class="title is-4">Chess AI</p>
+                <div class="content">
+
+                    Using Minimax I created an AI to play chess, can you beat it? <br/>
+                    Probably because its kinda shit.
+                    <br>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image">
+                <figure class="image is-4by3">
+                    <img src="images/Projects/hillClimbRacing.png" height="960" width="1280"/>
+                </figure>
+            </div>
+            <div class="card-content">
+                <p class="title is-4">AI Learns To Play Hill Climb Racing</p>
+                <div class="content">
+
+                    Using my favourite physics engine (box2d) I created the game Hill Climb Racing.
+                    Then because that wasn't enough punishment, I used NEAT to teach AIs to play this game.
+                    <br>
+                    Also F@#KIN GRASS!!!!!!!!!!!!!
+                    <br>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <div class="card-image">
+                <figure class="image is-4by3">
+                    <img src="images/Projects/worldsHardestGame.png" height="960" width="1280"/>
+                </figure>
+            </div>
+            <div class="card-content">
+                <p class="title is-4">AI Learns To Play The Worlds Hardest Game</p>
+                <div class="content">
+                    Some say that this game isn't actually the worlds hardest game. And while that's undeniably true,
+                    it makes for one hell of a clickbaity title
+
+                    <br>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <div class="card-image">
+                <figure class="image is-4by3">
+                    <img src="images/Projects/marbleCalculator.png" height="960" width="1280"/>
+                </figure>
+            </div>
+            <div class="card-content">
+                <p class="title is-4">Creating A Calculator Using Only Marbles</p>
+                <div class="content">
+                    <i>Hey Evan I don't like my calculator, it's way too fast and reliable, can you help me out?</i><br>
+
+
+                    <br>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            hi
+        </div>
+        <div>
+            hi
+        </div>
+        <div>
+            hi
+        </div>
+        <div>
+            hi
+        </div>
+        <div>
+            hi
+        </div>
+        <div>
+            hi
+        </div>
+        <div>
+            hi
+        </div>
+        <div>
+            hi
+        </div>
+        <div>
+            hi
+        </div>
+        <div>
+            hi
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+</body>
+</html>

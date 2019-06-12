@@ -27,7 +27,7 @@ function preload() {
 
 function setup() {
 
-
+    setupElements();
     window.canvas = createCanvas(windowWidth, windowHeight);
     canvas.position(0, 0);
     window.canvas.style('z-index', 1);
@@ -43,23 +43,10 @@ function setup() {
     s.resetOnHamiltonian(hc.cycle);
     frameRate(30);
 
-    var elements = document.getElementsByTagName("BUTTON");
-    var element = select('button');
-    element.touchStarted(fuckOff);
-    element = select("body");
-    element.touchStarted(clickedBody);
 
     // .touchStarted(onclick);
 
 
-}
-//
-// function clickedBody() {
-//     window.onclick();
-// }
-
-function fuckOff() {
-    clickedHamburger()
 }
 
 function setBlocks() {
