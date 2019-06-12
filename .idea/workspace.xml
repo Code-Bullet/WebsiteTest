@@ -18,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/websiteUsingBulma/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="952">
-              <caret line="224" column="58" lean-forward="true" selection-start-line="224" selection-start-column="58" selection-end-line="224" selection-end-column="58" />
+            <state relative-caret-position="595">
+              <caret line="227" column="47" lean-forward="true" selection-start-line="227" selection-start-column="47" selection-end-line="227" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -148,12 +148,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1560241901787</updated>
-      <workItem from="1560241904119" duration="12100000" />
+      <workItem from="1560241904119" duration="12757000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12100000" />
+    <option name="totallyTimeSpent" value="12757000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="2575" height="1415" extended-state="6" />
@@ -210,8 +210,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/websiteUsingBulma/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="952">
-          <caret line="224" column="58" lean-forward="true" selection-start-line="224" selection-start-column="58" selection-end-line="224" selection-end-column="58" />
+        <state relative-caret-position="595">
+          <caret line="227" column="47" lean-forward="true" selection-start-line="227" selection-start-column="47" selection-end-line="227" selection-end-column="47" />
         </state>
       </provider>
     </entry>
