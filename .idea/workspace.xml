@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="388acb6a-4b94-4d28-a348-cda693076322" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/websiteUsingBulma/pageJs/sketch.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/websiteUsingBulma/projects.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/websiteUsingBulma/styles/navBarStyle.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/websiteUsingBulma/SnakeGame/libraries/p5.dom.js" beforeDir="false" afterPath="$PROJECT_DIR$/websiteUsingBulma/libraries/p5.dom.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/websiteUsingBulma/SnakeGame/libraries/p5.js" beforeDir="false" afterPath="$PROJECT_DIR$/websiteUsingBulma/libraries/p5.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/websiteUsingBulma/SnakeGame/libraries/p5.sound.js" beforeDir="false" afterPath="$PROJECT_DIR$/websiteUsingBulma/libraries/p5.sound.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/websiteUsingBulma/SnakeGame/sketch.js" beforeDir="false" afterPath="$PROJECT_DIR$/websiteUsingBulma/SnakeGame/sketch.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/websiteUsingBulma/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/websiteUsingBulma/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/websiteUsingBulma/projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/websiteUsingBulma/projects.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,20 +15,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/websiteUsingBulma/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="816">
+            <state relative-caret-position="1428">
               <caret line="84" column="17" lean-forward="true" selection-start-line="84" selection-start-column="17" selection-end-line="84" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/websiteUsingBulma/projects.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="901">
-              <caret line="53" selection-start-line="53" selection-end-line="53" />
+            <state relative-caret-position="831">
+              <caret line="75" column="30" selection-start-line="75" selection-start-column="30" selection-end-line="75" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -113,8 +105,8 @@
         <option value="$PROJECT_DIR$/websiteUsingBulma/SnakeGame/sketch.js" />
         <option value="$PROJECT_DIR$/websiteUsingBulma/pageJs/sketch.js" />
         <option value="$PROJECT_DIR$/websiteUsingBulma/styles/navBarStyle.css" />
-        <option value="$PROJECT_DIR$/websiteUsingBulma/projects.html" />
         <option value="$PROJECT_DIR$/websiteUsingBulma/index.html" />
+        <option value="$PROJECT_DIR$/websiteUsingBulma/projects.html" />
       </list>
     </option>
   </component>
@@ -204,12 +196,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1560241901787</updated>
-      <workItem from="1560241904119" duration="20975000" />
+      <workItem from="1560241904119" duration="21288000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20975000" />
+    <option name="totallyTimeSpent" value="21288000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="2575" height="1415" extended-state="6" />
@@ -278,17 +270,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/websiteUsingBulma/projects.html">
+    <entry file="file://$PROJECT_DIR$/websiteUsingBulma/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="901">
-          <caret line="53" selection-start-line="53" selection-end-line="53" />
+        <state relative-caret-position="1428">
+          <caret line="84" column="17" lean-forward="true" selection-start-line="84" selection-start-column="17" selection-end-line="84" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/websiteUsingBulma/index.html">
+    <entry file="file://$PROJECT_DIR$/websiteUsingBulma/projects.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="84" column="17" lean-forward="true" selection-start-line="84" selection-start-column="17" selection-end-line="84" selection-end-column="17" />
+        <state relative-caret-position="831">
+          <caret line="75" column="30" selection-start-line="75" selection-start-column="30" selection-end-line="75" selection-end-column="30" />
         </state>
       </provider>
     </entry>
