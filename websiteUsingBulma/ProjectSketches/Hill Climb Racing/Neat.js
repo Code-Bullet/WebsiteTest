@@ -1527,26 +1527,28 @@ class Genome {
 
 
   fullyConnect(innovationHistory) {
-
-    //this will be a new number if no identical genome has mutated in the same
-
-    for (var i = 0; i < this.inputs; i++) {
-      for (var j = 0; j < this.outputs; j++) {
-        var connectionInnovationNumber = this.getInnovationNumber(innovationHistory, this.nodes[i], this.nodes[this.nodes.length - j - 2]);
-        this.genes.push(new connectionGene(this.nodes[i], this.nodes[this.nodes.length - j - 2], random(-1, 1), connectionInnovationNumber));
-      }
+    while(!this.fullyConnected()){
+      this.addConnection(innovationHistory);
     }
+    // //this will be a new number if no identical genome has mutated in the same
+    //
+    // for (var i = 0; i < this.inputs; i++) {
+    //   for (var j = 0; j < this.outputs; j++) {
+    //     var connectionInnovationNumber = this.getInnovationNumber(innovationHistory, this.nodes[i], this.nodes[this.nodes.length - j - 2]);
+    //     this.genes.push(new connectionGene(this.nodes[i], this.nodes[this.nodes.length - j - 2], random(-1, 1), connectionInnovationNumber));
+    //   }
+    // }
+    //
+    // var connectionInnovationNumber = this.getInnovationNumber(innovationHistory, this.nodes[this.biasNode], this.nodes[this.nodes.length - 2]);
+    // this.genes.push(new connectionGene(this.nodes[this.biasNode], this.nodes[this.nodes.length - 2], random(-1, 1), connectionInnovationNumber));
+    //
+    // connectionInnovationNumber = this.getInnovationNumber(innovationHistory, this.nodes[this.biasNode], this.nodes[this.nodes.length - 3]);
+    // this.genes.push(new connectionGene(this.nodes[this.biasNode], this.nodes[this.nodes.length - 3], random(-1, 1), connectionInnovationNumber));
+    // //add the connection with a random array
 
-    var connectionInnovationNumber = this.getInnovationNumber(innovationHistory, this.nodes[this.biasNode], this.nodes[this.nodes.length - 2]);
-    this.genes.push(new connectionGene(this.nodes[this.biasNode], this.nodes[this.nodes.length - 2], random(-1, 1), connectionInnovationNumber));
-
-    connectionInnovationNumber = this.getInnovationNumber(innovationHistory, this.nodes[this.biasNode], this.nodes[this.nodes.length - 3]);
-    this.genes.push(new connectionGene(this.nodes[this.biasNode], this.nodes[this.nodes.length - 3], random(-1, 1), connectionInnovationNumber));
-    //add the connection with a random array
-
-
-    //changed this so if error here
-    this.connectNodes();
+    //
+    // //changed this so if error here
+    // this.connectNodes();
   }
 
 

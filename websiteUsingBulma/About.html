@@ -23,13 +23,23 @@
     <title>Projects</title>
 
     <style>
-
+        html, body{
+            height:100%;
+            min-height: auto;
+        }
+        html{
+            background: #141414;
+        }
         .mainContainer {
             display: grid;
             grid-template-columns: 1fr 5fr 1fr;
             padding-top: 2em;
             /*background: white;*/
 
+        }
+
+        .mainContent {
+            grid-column: 2;
         }
 
         .projectItems {
@@ -50,13 +60,7 @@
 
         }
 
-        .card:hover {
-            background: #e8e8e8;
-        }
 
-        a {
-            text-align: center;
-        }
 
         .content {
 
@@ -71,7 +75,9 @@
             .projectItems {
                 grid-template-columns: 1fr 1fr;
             }
-
+            html, body{
+                height:auto;
+            }
         }
 
         @media screen and (max-width: 700px) {
@@ -79,7 +85,9 @@
                 grid-template-columns: 1fr;
 
             }
-
+            html, body{
+                height:auto;
+            }
             .content {
 
                 font-size: 80%;
@@ -145,10 +153,10 @@
     </div>
 
     <div class="menuItems">
-        <div>
+        <div >
             <a href="index.html">Home</a>
         </div>
-        <div class="active">
+        <div>
             <a href="projects.html">Projects</a>
 
         </div>
@@ -156,7 +164,7 @@
             <a href="merch.html">Merch</a>
 
         </div>
-        <div>
+        <div class="active">
             <a href="About.html">About</a>
 
         </div>
@@ -211,100 +219,66 @@
 </div>
 
 <div class="mainContainer">
-    <div class="projectItems">
+    <div class="mainContent">
+        <div class="card">
 
-
-        <a href="ProjectSketches/flappyBird/flappyBird.html" class="card">
-            <div class="card-image">
-                <figure class="image is-4by3">
-                    <img src="images/Projects/flappyBird.png" height="960" width="1280"/>
-                </figure>
-            </div>
             <div class="card-content">
-                <p class="title is-4">AI Learns To Play Flappy Bird</p>
                 <div class="content">
-                    As a 1 day challenge I coded the game flappy bird and added an AI to learn to play the game<br>
-                    that was not a good day
+                    <center>
+                        <p class="title is-4">About Me</p>
+                        <p class="subtitle is-6">Mr. Code Bullet</p>
+                    </center>
+
 
 
                     <br>
+                    <br>
+                    <img src="images/code Bullet pose.png" height="480" width="480" style="width: 40%; max-width: 480px; min-width:200px; float:left; padding: 1em"/>
+                    I was born in the harsh Australian outback, where it has never once rained and where is it is so hot
+                    that it is biologically
+                    impossible to feel joy. I was abandoned by my birth parents because they were scared of my abilities,
+                    so I was raised by giant desert wolves.
+                    My only solution to survive was to hack the sand in order to get the nutrients I needed, luckily the
+                    desert wolves were adept at programming and taught me everything I know about computer science.
+                    Eventually I evolved to have a computer integrated into my face, this reduced the latency between my
+                    brain and the computer. On my 12th birthday I was tossed into the desert ocean as a coming of age
+                    ceremony. <br>
+                    The wolves called this "if(wolf.age >= 12){ wolf.position = ocean;}". In order to survive this trial,
+                    I hacked the desert sharks and programmed them to drink all the desert ocean so I could escape. <br>
+                    Victory <br>
+                    At this point I was officially a desert Wolf Alpha. I was happy.
+                    <br>
+                    <br>
+                    2 years later something happened which changed my life forever. <br>
+                    I was watering the desert ocean when I heard it, the terrifying roar of the desert Lions.<br>
+                    I ran back to the desert wolf camp, when I saw the devastation.<br>
+                    The desert Lion King had given a ted talk to every member of my pack, convincing them to use the
+                    python programming language <br>
+                    <strong>Oh the horror </strong><br>
+                    The desert Lion King took off his glasses and stared directly into my monitor face and smiled as he
+                    said "Look at these 1 line for loops"
+                    <br>
+                    "Python is for filthy casuals and always will be" I shouted, however my worlds fell on deaf ears,
+                    the damage was already done.
+                    <br>
+                    I turned by back on the traitors which I had once called my pack and ran, ran as far as I could.
+                    <br>
+                    I escaped.
+                    <br>
+                    But the losses I experienced that day would haunt me forever.
+                    <br>
+                    I've spent every second of my remaining life in hiding. To pass the time I make youtube videos and
+                    shitty websites, however one day my past will catch
+                    up with me and when that day comes, I will fight to my very last semicolon against the wrath of the
+                    Desert Lion King.
+                    <br>
+                    <br>
+                    <br>
+                    I also like long walks on the beach and puppies.
+
                 </div>
             </div>
-        </a>
-
-
-        <a href="ProjectSketches/chess/chess.html" class="card">
-            <div class="card-image">
-                <figure class="image is-4by3">
-                    <img src="images/Projects/chess.png" height="960" width="1280"/>
-                </figure>
-            </div>
-            <div class="card-content">
-                <p class="title is-4">Chess AI</p>
-                <div class="content">
-
-                    Using Minimax I created an AI to play chess, can you beat it? <br/>
-                    Probably because its kinda shit.
-                    <br>
-                </div>
-            </div>
-        </a>
-
-        <a href="ProjectSketches/Hill%20Climb%20Racing/hillClimbRacing.html" class="card">
-            <div class="card-image">
-                <figure class="image is-4by3">
-                    <img src="images/Projects/hillClimbRacing.png" height="960" width="1280"/>
-                </figure>
-            </div>
-            <div class="card-content">
-                <p class="title is-4">AI Learns To Play Hill Climb Racing</p>
-                <div class="content">
-
-                    Using my favourite physics engine (box2d) I created the game Hill Climb Racing.
-                    Then because that wasn't enough punishment, I used NEAT to teach AIs to play this game.
-                    <br>
-                    Also F@#KIN GRASS!!!!!!!!!!!!!
-                    <br>
-                </div>
-            </div>
-        </a>
-
-
-        <a href="ProjectSketches/WorldsHardestGame/WHGprojects.html" class="card">
-            <div class="card-image">
-                <figure class="image is-4by3">
-                    <img src="images/Projects/worldsHardestGame.png" height="960" width="1280"/>
-                </figure>
-            </div>
-            <div class="card-content">
-                <p class="title is-4">AI Learns To Play The Worlds Hardest Game</p>
-                <div class="content">
-                    Some say that this game isn't actually the worlds hardest game. And while that's undeniably true,
-                    it makes for one hell of a clickbaity title
-
-                    <br>
-                </div>
-            </div>
-        </a>
-
-
-        <a href="ProjectSketches/MarbleCalculator/MarbleCalculator.html" class="card">
-            <div class="card-image">
-                <figure class="image is-4by3">
-                    <img src="images/Projects/marbleCalculator.png" height="960" width="1280"/>
-                </figure>
-            </div>
-            <div class="card-content">
-                <p class="title is-4">Creating A Calculator Using Only Marbles</p>
-                <div class="content">
-                    <i>Hey Evan I don't like my calculator, it's way too fast and reliable, can you help me out?</i><br>
-
-
-                    <br>
-                </div>
-            </div>
-        </a>
-
+        </div>
     </div>
 
 

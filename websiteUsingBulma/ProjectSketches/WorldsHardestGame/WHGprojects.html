@@ -32,6 +32,8 @@
 
         }
 
+
+
         .projectItems {
             display: grid;
             grid-column: 2;
@@ -41,7 +43,7 @@
             grid-gap: 2em;
         }
 
-        .projectItems > div {
+        .projectItems > a {
             text-align: center;
         }
 
@@ -49,8 +51,8 @@
             background: #ffffff;
         }
 
-        .content{
-
+        .card:hover{
+            background: #e8e8e8;
 
         }
         .title{
@@ -125,27 +127,31 @@
 <div class="navBar">
 
     <div class="logo">
-        <img src="../../images/GlowingLogoWithName.png" alt="TheBigCB.com">
+        <a href="../../index.html">
+            <img src="../../images/GlowingLogoWithName.png" alt="TheBigCB.com">
+
+        </a>
     </div>
 
     <div class="menuItems">
-        <div class="active">
-            <a href="#home">Home</a>
+        <div>
+            <a href="../../index.html">Home</a>
         </div>
         <div>
-            <a href="#home">Projects</a>
+            <a href="../../projects.html">Projects</a>
 
         </div>
         <div>
-            <a href="#home">Merch</a>
+            <a href="../../merch.html">Merch</a>
 
         </div>
         <div>
-            <a href="#home">About</a>
+            <a href="../../About.html">About</a>
 
         </div>
 
     </div>
+
     <button class="hamburgerButton" onclick="">
         <i class="fa fa-bars" style="font-size:24px;color:white"></i>
     </button>
@@ -197,7 +203,7 @@
 <div class="mainContainer">
     <div class="projectItems">
 
-        <div class="card">
+        <a href= "WHG/Level1/level1.html" class="card">
             <div class="card-image">
                 <figure class="image is-3by2">
                     <img src="levelImages/level1.png" height="480" width="720"/>
@@ -210,8 +216,8 @@
                     <br>
                 </div>
             </div>
-        </div>
-        <div class="card">
+        </a>
+        <a href="WHG/Level2/level2.html" class="card">
             <div class="card-image">
                 <figure class="image is-3by2">
                     <img src="levelImages/level2.png" height="480" width="720"/>
@@ -224,9 +230,9 @@
                     <br>
                 </div>
             </div>
-        </div>
+        </a>
 
-        <div class="card">
+        <a href="WHG/Level3/level3.html" class="card">
             <div class="card-image">
                 <figure class="image is-3by2">
                     <img src="levelImages/level3.png" height="480" width="720"/>
@@ -239,8 +245,8 @@
                     <br>
                 </div>
             </div>
-        </div>
-        <div class="card">
+        </a>
+        <a href="WHG/Level4/level4.html" class="card">
             <div class="card-image">
                 <figure class="image is-3by2">
                     <img src="levelImages/level4.png" height="480" width="720"/>
@@ -253,8 +259,8 @@
                     <br>
                 </div>
             </div>
-        </div>
-        <div class="card">
+        </a>
+        <a href="WHG/Level5/level5.html" class="card">
             <div class="card-image">
                 <figure class="image is-3by2">
                     <img src="levelImages/level5.png" height="480" width="720"/>
@@ -267,8 +273,8 @@
                     <br>
                 </div>
             </div>
-        </div>
-        <div class="card">
+        </a>
+        <a href="WHG/Level6/level6.html" class="card">
             <div class="card-image">
                 <figure class="image is-3by2">
                     <img src="levelImages/level6.png" height="480" width="720"/>
@@ -283,7 +289,7 @@
                     <br>
                 </div>
             </div>
-        </div>
+        </a>
 
     </div>
 

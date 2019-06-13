@@ -23,7 +23,9 @@ body {
     /*background: #343434 url("images/snakeBackground.gif");*/
     /*background-size: cover;*/
 }
-
+html{
+    background: #141414;
+}
 .navBar {
     z-index: 2;
     display: grid;
