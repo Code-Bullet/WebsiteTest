@@ -10,40 +10,42 @@
           integrity="sha256-gsmEoJAws/Kd3CjuOQzLie5Q3yshhvmo7YNtBG7aaEY=" crossorigin="anonymous">
 
 
-    <script language="javascript" type="text/javascript" src="../../libraries/p5.js"></script>
-    <script language="javascript" src="../../libraries/p5.dom.js"></script>
-    <script language="javascript" src="../../libraries/p5.sound.js"></script>
-    <script language="javascript" src="../../libraries/matter.js"></script>
-    <script language="javascript" type="text/javascript" src="sketch.js"></script>
-    <script language="javascript" type="text/javascript" src="marble.js"></script>
-    <script language="javascript" type="text/javascript" src="solid.js"></script>
-    <script language="javascript" type="text/javascript" src="startingMarbles.js"></script>
-    <script language="javascript" type="text/javascript" src="looseRect.js"></script>
-    <script language="javascript" type="text/javascript" src="Object.js"></script>
-    <link rel="stylesheet" href="../../styles/navBarStyle.css">
+    <script language="javascript" type="text/javascript" src="../../../../libraries/p5.js"></script>
+    <script language="javascript" src="../../../../libraries/p5.dom.js"></script>
+    <script language="javascript" src="../../../../libraries/p5.sound.js"></script>
+
+    <script language="javascript" type="text/javascript" src="../sketch.js"></script>
+    <script language="javascript" type="text/javascript" src="../Tile.js"></script>
+
+    <script language="javascript" type="text/javascript" src="PlayerLv6Final.js"></script>
+    <script language="javascript" type="text/javascript" src="setting_level6.js"></script>
+
+    <script language="javascript" type="text/javascript" src="../Solid.js"></script>
+    <script language="javascript" type="text/javascript" src="../Dot.js"></script>
+    <script language="javascript" type="text/javascript" src="../Population.js"></script>
+    <script language="javascript" type="text/javascript" src="../Brain.js"></script>
+    <script language="javascript" type="text/javascript" src="../Node.js"></script>
+    <script language="javascript" type="text/javascript" src="../Coin.js"></script>
+
+
+    <link rel="stylesheet" href="../../../../styles/navBarStyle.css">
 
     <style>
-        body, html{
-            height:100%;
-            margin:0;
 
 
-        }
-        .mainContainer{
+        .mainContainer {
             display: grid;
             grid-template-columns: 1fr 5fr 1fr;
-
+            padding-bottom: 3em;
         }
 
-        .canvasContainer{
+        .canvasContainer {
             grid-column: 2;
             background: white;
-            padding:5em;
+            padding: 1em 3em 1em 3em;
             align-self: center;
             justify-self: center;
         }
-
-
 
 
     </style>
@@ -55,15 +57,15 @@
 <div class="navBar">
 
     <div class="logo">
-        <img src="../../images/GlowingLogoWithName.png" alt="TheBigCB.com">
+        <img src="../../../../images/GlowingLogoWithName.png" alt="TheBigCB.com">
     </div>
 
     <div class="menuItems">
         <div class="active">
-            <a href="../../index.html">Home</a>
+            <a href="../../../../index.html">Home</a>
         </div>
         <div>
-            <a href="../../projects.html">Projects</a>
+            <a href="../../../../projects.html">Projects</a>
 
         </div>
         <div>
@@ -129,16 +131,49 @@
     <div class="mainContainer">
         <div class="canvasContainer">
             <div class="title is-4">
-                Marble Calculator
+                Worlds Hardest Game Level 6
             </div>
             <div id="canvas"></div>
 
 
             <div class="content">
+                <br/>
+                <div id="instructions"><strong>P:</strong> play yourself &emsp;&emsp; <strong>G:</strong> replay evolution hightlights &emsp;&emsp;
+                    <strong>SPACE:</strong> only show best player
+                </div>
+                <br/>
 
-               <strong>P:</strong> play/pause &emsp; <strong>R:</strong> Reset Calculator &emsp; <strong>CLICK:</strong> Add marble &emsp; <strong>Mouse Wheel:</strong> Zoom
 
+                <div id=buttons>
+                    <div id="resetButton">
+                    </div>
+                    <br/>
 
+                    <hr/>
+                    <br/>
+
+                    <div id="popSize">
+                    </div>
+                    <br/>
+
+                    <div id="mutationRate">
+                    </div>
+                    <br/>
+
+                    <div id="evolutionSpeed">
+                    </div>
+                    <br/>
+                    <hr/>
+
+                    <div id="increaseMovesBy">
+                    </div>
+                    <br/>
+
+                    <div id="increaseEvery">
+                    </div>
+                    <br/>
+
+                </div>
             </div>
         </div>
     </div>
@@ -147,3 +182,4 @@
 </center>
 </body>
 </html>
+

@@ -1,0 +1,80 @@
+#main{
+  width : 1306px;
+  padding: 2%;
+   /* margin: 2%; */
+  margin-left: 0%;
+  /* left: 10%; */
+  /* transform: translateX(25%); */
+}
+#main h2{
+  text-align:  center;
+  background-color: black;
+  color: rgb(20,200,20);
+  padding: 2%;
+  font-size: 200%;
+
+}
+
+#canvas{
+  padding: 10px;
+  border-color: black;
+  border: 1%;
+  background-color: black;
+  border-style: solid;
+
+
+}
+#main hr{
+  padding:0.1%;
+  background-color: black;
+   /* rgb(20,200,20); */
+  border-color:  rgb(20,200,20);
+  /* border-style: solid; */
+}
+#buttons {
+  width: 50%;
+  margin-left: 22%;
+  font-size: 120%;
+  font-weight: bolder;
+  background-color: white;
+  padding:3%;
+  /* padding-top: 5%; */
+  border-color:  black;
+  /* rgb(20,200,20); */
+  border-style: solid;
+  text-align: center;
+
+}
+
+ /* #buttons div{
+  float: left;
+
+} */
+#instructions{
+  text-align: center;
+}
+ button{
+
+  background-color: rgb(20,180,20);
+  color: black;
+  /* rgb(20,200,20); */
+  border-color: black;
+  /* rgb(20,200,20); */
+  margin:0.2%;
+  /* font-size: 120%; */
+  width: 5%;
+}
+ button:hover{
+  background-color: rgb(20,220,20);
+  color: black;
+  /* rgb(20,200,20); */
+  border-color: black;
+  /* rgb(20,200,20); */
+  margin:0.2%;
+  /* font-size: 105%; */
+  width: 5%;
+  /* float: right; */
+}
+#resetButton button{
+  width: 20%;
+}

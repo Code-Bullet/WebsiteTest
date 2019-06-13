@@ -1,4 +1,21 @@
+/*
+
+  if anyone is reading this then Im sorry
+  this is probably the shittest code I've written in a while
+  Dont learn anything from this
+  If you do no one will love you because u'd be a crap coder
+  I get a free pass because [insert excuse here]
+  again
+  Sorry
+
+  regards
+  Code Bullet
+
+ */
+
+
 //aliases
+
 var Engine = Matter.Engine;
 var World = Matter.World;
 var Bodies = Matter.Bodies;
@@ -548,7 +565,7 @@ function setup() {
 }
 
 function draw() {
-  background(200);
+  background(240);
   mouseDownCount +=1;
   if(dragging){
     dragCamera();
