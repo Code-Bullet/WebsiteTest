@@ -2,43 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="388acb6a-4b94-4d28-a348-cda693076322" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/websiteUsingBulma/About.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/websiteUsingBulma/ProjectSketches/chess/Board.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/websiteUsingBulma/ProjectSketches/chess/MinimaxFunctions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/websiteUsingBulma/ProjectSketches/chess/Piece.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/websiteUsingBulma/ProjectSketches/chess/assets/2000px-Chess_Pieces_Sprite_01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/websiteUsingBulma/ProjectSketches/chess/assets/2000px-Chess_Pieces_Sprite_02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/websiteUsingBulma/ProjectSketches/chess/assets/2000px-Chess_Pieces_Sprite_03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/websiteUsingBulma/ProjectSketches/chess/assets/2000px-Chess_Pieces_Sprite_04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/websiteUsingBulma/ProjectSketches/chess/assets/2000px-Chess_Pieces_Sprite_05.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/websiteUsingBulma/ProjectSketches/chess/assets/2000px-Chess_Pieces_Sprite_06.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/websiteUsingBulma/ProjectSketches/chess/assets/2000px-Chess_Pieces_Sprite_07.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/websiteUsingBulma/ProjectSketches/chess/assets/2000px-Chess_Pieces_Sprite_08.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/websiteUsingBulma/ProjectSketches/chess/assets/2000px-Chess_Pieces_Sprite_09.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/websiteUsingBulma/ProjectSketches/chess/assets/2000px-Chess_Pieces_Sprite_10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/websiteUsingBulma/ProjectSketches/chess/assets/2000px-Chess_Pieces_Sprite_11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/websiteUsingBulma/ProjectSketches/chess/assets/2000px-Chess_Pieces_Sprite_12.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/websiteUsingBulma/ProjectSketches/chess/chess.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/websiteUsingBulma/ProjectSketches/chess/sketch.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/websiteUsingBulma/merch.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/websiteUsingBulma/ProjectSketches/Hill Climb Racing/Neat.js" beforeDir="false" afterPath="$PROJECT_DIR$/websiteUsingBulma/ProjectSketches/Hill Climb Racing/Neat.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/websiteUsingBulma/ProjectSketches/Hill Climb Racing/hillClimbRacing.html" beforeDir="false" afterPath="$PROJECT_DIR$/websiteUsingBulma/ProjectSketches/Hill Climb Racing/hillClimbRacing.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/websiteUsingBulma/ProjectSketches/MarbleCalculator/MarbleCalculator.html" beforeDir="false" afterPath="$PROJECT_DIR$/websiteUsingBulma/ProjectSketches/MarbleCalculator/MarbleCalculator.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/websiteUsingBulma/ProjectSketches/WorldsHardestGame/WHG/Level1/level1.html" beforeDir="false" afterPath="$PROJECT_DIR$/websiteUsingBulma/ProjectSketches/WorldsHardestGame/WHG/Level1/level1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/websiteUsingBulma/ProjectSketches/WorldsHardestGame/WHG/Level2/level2.html" beforeDir="false" afterPath="$PROJECT_DIR$/websiteUsingBulma/ProjectSketches/WorldsHardestGame/WHG/Level2/level2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/websiteUsingBulma/ProjectSketches/WorldsHardestGame/WHG/Level3/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/websiteUsingBulma/ProjectSketches/WorldsHardestGame/WHG/Level3/level3.html" beforeDir="false" afterPath="$PROJECT_DIR$/websiteUsingBulma/ProjectSketches/WorldsHardestGame/WHG/Level3/level3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/websiteUsingBulma/ProjectSketches/WorldsHardestGame/WHG/Level4/level4.html" beforeDir="false" afterPath="$PROJECT_DIR$/websiteUsingBulma/ProjectSketches/WorldsHardestGame/WHG/Level4/level4.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/websiteUsingBulma/ProjectSketches/WorldsHardestGame/WHG/Level5/level5.html" beforeDir="false" afterPath="$PROJECT_DIR$/websiteUsingBulma/ProjectSketches/WorldsHardestGame/WHG/Level5/level5.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/websiteUsingBulma/ProjectSketches/WorldsHardestGame/WHG/Level6/level6.html" beforeDir="false" afterPath="$PROJECT_DIR$/websiteUsingBulma/ProjectSketches/WorldsHardestGame/WHG/Level6/level6.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/websiteUsingBulma/ProjectSketches/WorldsHardestGame/WHGprojects.html" beforeDir="false" afterPath="$PROJECT_DIR$/websiteUsingBulma/ProjectSketches/WorldsHardestGame/WHGprojects.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/websiteUsingBulma/images/Projects/chess.png" beforeDir="false" afterPath="$PROJECT_DIR$/websiteUsingBulma/images/Projects/chess.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/websiteUsingBulma/images/Projects/hillClimbRacing.png" beforeDir="false" afterPath="$PROJECT_DIR$/websiteUsingBulma/images/Projects/hillClimbRacing.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/websiteUsingBulma/images/Projects/marbleCalculator.png" beforeDir="false" afterPath="$PROJECT_DIR$/websiteUsingBulma/images/Projects/marbleCalculator.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/websiteUsingBulma/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/websiteUsingBulma/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/websiteUsingBulma/projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/websiteUsingBulma/projects.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/websiteUsingBulma/styles/navBarStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/websiteUsingBulma/styles/navBarStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/websiteUsingBulma/About.html" beforeDir="false" afterPath="$PROJECT_DIR$/websiteUsingBulma/About.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -54,7 +18,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/websiteUsingBulma/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="473">
+            <state relative-caret-position="1241">
               <caret line="73" selection-start-line="73" selection-end-line="97" selection-end-column="14" />
             </state>
           </provider>
@@ -63,7 +27,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/websiteUsingBulma/ProjectSketches/Hill Climb Racing/hillClimbRacing.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
+            <state relative-caret-position="1105">
               <caret line="65" column="22" selection-start-line="65" selection-start-column="22" selection-end-line="65" selection-end-column="22" />
             </state>
           </provider>
@@ -72,7 +36,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/websiteUsingBulma/ProjectSketches/MarbleCalculator/MarbleCalculator.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1793">
+            <state relative-caret-position="2414">
               <caret line="142" column="173" selection-start-line="142" selection-start-column="173" selection-end-line="142" selection-end-column="173" />
             </state>
           </provider>
@@ -81,7 +45,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/websiteUsingBulma/ProjectSketches/WorldsHardestGame/WHGprojects.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="986">
+            <state relative-caret-position="2414">
               <caret line="142" column="14" lean-forward="true" selection-start-line="142" selection-start-column="14" selection-end-line="142" selection-end-column="14" />
             </state>
           </provider>
@@ -90,7 +54,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/websiteUsingBulma/ProjectSketches/WorldsHardestGame/WHG/Level1/level1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="884">
+            <state relative-caret-position="901">
               <caret line="53" selection-start-line="53" selection-end-line="77" selection-end-column="10" />
             </state>
           </provider>
@@ -99,7 +63,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/websiteUsingBulma/ProjectSketches/WorldsHardestGame/WHG/Level6/level6.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1034">
+            <state relative-caret-position="1394">
               <caret line="82" column="10" selection-start-line="82" selection-start-column="10" selection-end-line="82" selection-end-column="10" />
             </state>
           </provider>
@@ -108,8 +72,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/websiteUsingBulma/About.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="697">
-              <caret line="248" column="84" selection-start-line="248" selection-start-column="84" selection-end-line="248" selection-end-column="84" />
+            <state relative-caret-position="986">
+              <caret line="265" column="30" lean-forward="true" selection-start-line="265" selection-start-column="30" selection-end-line="265" selection-end-column="30" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -120,7 +84,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/websiteUsingBulma/projects.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-978">
+            <state relative-caret-position="2363">
               <caret line="139" selection-start-line="139" selection-end-line="163" selection-end-column="10" />
             </state>
           </provider>
@@ -129,7 +93,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/websiteUsingBulma/merch.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="603">
+            <state relative-caret-position="2363">
               <caret line="139" column="13" selection-start-line="139" selection-start-column="13" selection-end-line="139" selection-end-column="13" />
             </state>
           </provider>
@@ -138,8 +102,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/websiteUsingBulma/ProjectSketches/flappyBird/flappyBird.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
+            <state relative-caret-position="935">
+              <caret line="55" selection-start-line="55" selection-end-line="55" />
             </state>
           </provider>
         </entry>
@@ -315,11 +279,12 @@
       <updated>1560241901787</updated>
       <workItem from="1560241904119" duration="26679000" />
       <workItem from="1560387686218" duration="19683000" />
+      <workItem from="1564559313799" duration="12000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46362000" />
+    <option name="totallyTimeSpent" value="46374000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="2575" height="1415" extended-state="6" />
@@ -434,13 +399,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/websiteUsingBulma/ProjectSketches/WorldsHardestGame/WHG/Level2/level2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" selection-start-line="6" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/websiteUsingBulma/ProjectSketches/WorldsHardestGame/WHG/Level1/sketch.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="370">
@@ -462,38 +420,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/websiteUsingBulma/ProjectSketches/WorldsHardestGame/WHG/Level3/level3.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1496">
-          <caret line="88" column="6" lean-forward="true" selection-start-line="88" selection-start-column="6" selection-end-line="88" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/websiteUsingBulma/ProjectSketches/WorldsHardestGame/WHG/sketch.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="950">
           <caret line="515" column="28" selection-start-line="515" selection-start-column="28" selection-end-line="515" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/websiteUsingBulma/ProjectSketches/WorldsHardestGame/WHG/Level4/level4.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" selection-start-line="6" selection-end-line="17" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/websiteUsingBulma/ProjectSketches/WorldsHardestGame/WHG/Level5/level5.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" selection-start-line="6" selection-end-line="17" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/websiteUsingBulma/ProjectSketches/WorldsHardestGame/WHG/Level6/level6.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" selection-start-line="6" selection-end-line="17" selection-end-column="81" />
         </state>
       </provider>
     </entry>
@@ -576,66 +506,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/websiteUsingBulma/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
-          <caret line="73" selection-start-line="73" selection-end-line="97" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/websiteUsingBulma/merch.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="603">
-          <caret line="139" column="13" selection-start-line="139" selection-start-column="13" selection-end-line="139" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/websiteUsingBulma/projects.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-978">
-          <caret line="139" selection-start-line="139" selection-end-line="163" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/websiteUsingBulma/ProjectSketches/WorldsHardestGame/WHGprojects.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="986">
-          <caret line="142" column="14" lean-forward="true" selection-start-line="142" selection-start-column="14" selection-end-line="142" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/websiteUsingBulma/ProjectSketches/chess/chess.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="388">
           <caret line="57" column="73" lean-forward="true" selection-start-line="57" selection-start-column="73" selection-end-line="57" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/websiteUsingBulma/ProjectSketches/flappyBird/flappyBird.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/websiteUsingBulma/ProjectSketches/Hill Climb Racing/hillClimbRacing.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="65" column="22" selection-start-line="65" selection-start-column="22" selection-end-line="65" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/websiteUsingBulma/ProjectSketches/MarbleCalculator/MarbleCalculator.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1793">
-          <caret line="142" column="173" selection-start-line="142" selection-start-column="173" selection-end-line="142" selection-end-column="173" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/websiteUsingBulma/ProjectSketches/WorldsHardestGame/WHG/Level1/level1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
-          <caret line="53" selection-start-line="53" selection-end-line="77" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -667,17 +541,73 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/websiteUsingBulma/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1241">
+          <caret line="73" selection-start-line="73" selection-end-line="97" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/websiteUsingBulma/ProjectSketches/Hill Climb Racing/hillClimbRacing.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1105">
+          <caret line="65" column="22" selection-start-line="65" selection-start-column="22" selection-end-line="65" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/websiteUsingBulma/ProjectSketches/MarbleCalculator/MarbleCalculator.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2414">
+          <caret line="142" column="173" selection-start-line="142" selection-start-column="173" selection-end-line="142" selection-end-column="173" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/websiteUsingBulma/ProjectSketches/WorldsHardestGame/WHGprojects.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2414">
+          <caret line="142" column="14" lean-forward="true" selection-start-line="142" selection-start-column="14" selection-end-line="142" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/websiteUsingBulma/ProjectSketches/WorldsHardestGame/WHG/Level1/level1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="901">
+          <caret line="53" selection-start-line="53" selection-end-line="77" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/websiteUsingBulma/ProjectSketches/WorldsHardestGame/WHG/Level6/level6.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1034">
+        <state relative-caret-position="1394">
           <caret line="82" column="10" selection-start-line="82" selection-start-column="10" selection-end-line="82" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/websiteUsingBulma/projects.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2363">
+          <caret line="139" selection-start-line="139" selection-end-line="163" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/websiteUsingBulma/merch.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2363">
+          <caret line="139" column="13" selection-start-line="139" selection-start-column="13" selection-end-line="139" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/websiteUsingBulma/ProjectSketches/flappyBird/flappyBird.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="935">
+          <caret line="55" selection-start-line="55" selection-end-line="55" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/websiteUsingBulma/About.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="248" column="84" selection-start-line="248" selection-start-column="84" selection-end-line="248" selection-end-column="84" />
+        <state relative-caret-position="986">
+          <caret line="265" column="30" lean-forward="true" selection-start-line="265" selection-start-column="30" selection-end-line="265" selection-end-column="30" />
           <folding>
             <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
