@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="388acb6a-4b94-4d28-a348-cda693076322" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/websiteUsingBulma/About.html" beforeDir="false" afterPath="$PROJECT_DIR$/websiteUsingBulma/About.html" afterDir="false" />
-    </list>
+    <list default="true" id="388acb6a-4b94-4d28-a348-cda693076322" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -279,16 +277,15 @@
       <updated>1560241901787</updated>
       <workItem from="1560241904119" duration="26679000" />
       <workItem from="1560387686218" duration="19683000" />
-      <workItem from="1564559313799" duration="12000" />
+      <workItem from="1564559313799" duration="612000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46374000" />
+    <option name="totallyTimeSpent" value="46974000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="2575" height="1415" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.107171" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
