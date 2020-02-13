@@ -50,17 +50,23 @@
 
         }
 
-        .card:hover{
+        .card:hover {
             background: #e8e8e8;
+        }
+
+        a {
+            text-align: center;
+        }
+
+        .content {
+
 
         }
-        .content{
 
+        .title {
+            font-family: montserrat-bold;
+        }
 
-        }
-        .title{
-         font-family: montserrat-bold;
-        }
         @media screen and (max-width: 1600px) {
             .projectItems {
                 grid-template-columns: 1fr 1fr;
@@ -73,12 +79,14 @@
                 grid-template-columns: 1fr;
 
             }
-            .content{
+
+            .content {
 
                 font-size: 80%;
             }
-            .title.is-4{
-                font-size:1em;
+
+            .title.is-4 {
+                font-size: 1em;
             }
         }
 
@@ -137,14 +145,14 @@
     </div>
 
     <div class="menuItems">
-        <div >
+        <div>
             <a href="index.html">Home</a>
         </div>
-        <div>
+        <div class="active">
             <a href="projects.html">Projects</a>
 
         </div>
-        <div class="active">
+        <div>
             <a href="merch.html">Merch</a>
 
         </div>
@@ -205,141 +213,97 @@
 <div class="mainContainer">
     <div class="projectItems">
 
-        <div class="card">
+
+        <a href="ProjectSketches/flappyBird/flappyBird.html" class="card">
             <div class="card-image">
                 <figure class="image is-4by3">
-                    <img src="images/Merch/fireManCalender.png" height="960" width="1280"/>
+                    <img src="images/Projects/flappyBird.png" height="960" width="1280"/>
                 </figure>
             </div>
             <div class="card-content">
-                <p class="title is-4">Code Bullet Fireman Calender</p>
+                <p class="title is-4">AI Learns To Play Flappy Bird</p>
                 <div class="content">
-                    $400
+                    As a 1 day challenge I coded the game flappy bird and added an AI to learn to play the game<br>
+                    that was not a good day
+
+
                     <br>
                 </div>
             </div>
-        </div>
+        </a>
 
 
-        <div class="card">
+        <a href="ProjectSketches/chess/chess.html" class="card">
             <div class="card-image">
                 <figure class="image is-4by3">
-                    <img src="images/Merch/laptop.png" height="960" width="1280"/>
+                    <img src="images/Projects/chess.png" height="960" width="1280"/>
                 </figure>
             </div>
             <div class="card-content">
-                <p class="title is-4">My old Laptop</p>
+                <p class="title is-4">Chess AI</p>
                 <div class="content">
-                    I'm not using it anymore
+
+                    Using Minimax I created an AI to play chess, can you beat it? <br/>
+                    Probably because its kinda shit.
                     <br>
                 </div>
             </div>
-        </div>
+        </a>
 
-        <div class="card">
+        <a href="ProjectSketches/Hill%20Climb%20Racing/hillClimbRacing.html" class="card">
             <div class="card-image">
                 <figure class="image is-4by3">
-                    <img src="images/Merch/codeBulletsSoul.png" height="960" width="1280"/>
+                    <img src="images/Projects/hillClimbRacing.png" height="960" width="1280"/>
                 </figure>
             </div>
             <div class="card-content">
-                <p class="title is-4">Code Bullet's soul</p>
+                <p class="title is-4">AI Learns To Play Hill Climb Racing</p>
                 <div class="content">
-                    $0.05
+
+                    Using my favourite physics engine (box2d) I created the game Hill Climb Racing.
+                    Then because that wasn't enough punishment, I used NEAT to teach AIs to play this game.
+                    <br>
+                    Also F@#KIN GRASS!!!!!!!!!!!!!
                     <br>
                 </div>
             </div>
-        </div>
+        </a>
 
 
-        <div class="card">
+        <a href="ProjectSketches/WorldsHardestGame/WHGprojects.html" class="card">
             <div class="card-image">
                 <figure class="image is-4by3">
-                    <img src="images/Merch/puppy.png" height="960" width="1280"/>
+                    <img src="images/Projects/worldsHardestGame.png" height="960" width="1280"/>
                 </figure>
             </div>
             <div class="card-content">
-                <p class="title is-4">Look a puppy</p>
+                <p class="title is-4">AI Learns To Play The Worlds Hardest Game</p>
                 <div class="content">
-                    YAY
-                    <br>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-image">
-                <figure class="image is-4by3">
-                    <img src="images/Merch/20bucks.png" height="960" width="1280"/>
-                </figure>
-            </div>
-            <div class="card-content">
-                <p class="title is-4">$20</p>
-                <div class="content">
-                    $30
-                    <br>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-image">
-                <figure class="image is-4by3">
-                    <img src="images/Merch/sunglasses.png" height="960" width="1280"/>
-                </figure>
-            </div>
-            <div class="card-content">
-                <p class="title is-4">Code Bullet Sunglasses</p>
-                <div class="content">
-                    JK i don't go outside
-                    <br>
-                </div>
-            </div>
-        </div>
+                    Some say that this game isn't actually the worlds hardest game. And while that's undeniably true,
+                    it makes for one hell of a clickbaity title
 
-        <div class="card">
-            <div class="card-image">
-                <figure class="image is-4by3">
-                    <img src="images/Merch/banana.png" height="960" width="1280"/>
-                </figure>
-            </div>
-            <div class="card-content">
-                <p class="title is-4">Literally just a banana</p>
-                <div class="content">
-                    $4,000
                     <br>
                 </div>
             </div>
-        </div>
+        </a>
 
-        <div class="card">
+
+        <a href="ProjectSketches/MarbleCalculator/MarbleCalculator.html" class="card">
             <div class="card-image">
                 <figure class="image is-4by3">
-                    <img src="images/Merch/sneakers.png" height="960" width="1280"/>
+                    <img src="images/Projects/marbleCalculator.png" height="960" width="1280"/>
                 </figure>
             </div>
             <div class="card-content">
-                <p class="title is-4">Code Bullet Flavoured Sneakers</p>
+                <p class="title is-4">Creating A Calculator Using Only Marbles</p>
                 <div class="content">
-                    $100
+                    <i>Hey Evan I don't like my calculator, it's way too fast and reliable, can you help me out?</i><br>
+
+
                     <br>
                 </div>
             </div>
-        </div>
-
-        <div class="card">
-            <div class="card-image">
-                <figure class="image is-4by3">
-                    <img src="images/Merch/Mug.png" height="960" width="1280"/>
-                </figure>
-            </div>
-            <div class="card-content">
-                <p class="title is-4">Code Bullet Mug</p>
-                <div class="content">
-                    Probs like 20 bucks
-                    <br>
-                </div>
-            </div>
-        </div>
-
+        </a>
 
     </div>
 

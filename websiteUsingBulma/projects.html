@@ -18,17 +18,35 @@
     <script language="javascript" src="libraries/p5.sound.js"></script>
     <script language="javascript" type="text/javascript" src="pageJs/sketch.js"></script>
 
+
+
+    <script language="javascript" type="text/javascript" src="projectSketch/homeSketch.js"></script>
+    <script language="javascript" type="text/javascript" src="projectSketch/dot.js"></script>
     <!--Debugger-->
     <!--            <link rel="stylesheet" href="styles/debug.css">-->
     <title>Projects</title>
 
     <style>
+        body, html{
+            height:100%;
+            margin:0;
 
-        .mainContainer {
+
+        }
+        .mainContainer{
             display: grid;
             grid-template-columns: 1fr 5fr 1fr;
             padding-top: 2em;
-            /*background: white;*/
+
+
+        }
+
+        .canvasContainer{
+            grid-column: 2;
+            background: #141414;
+            padding:0em 0em 0em 0em;
+            align-self: center;
+            justify-self: center;
 
         }
 
@@ -39,6 +57,7 @@
             align-content: center;
             justify-content: center;
             grid-gap: 2em;
+            padding-top: 10em;
         }
 
         .projectItems > div {
@@ -89,51 +108,24 @@
                 font-size: 1em;
             }
         }
+        @media screen and (max-height: 1000px) {
+            .mainContainer {
+                padding-top: 0em;
+
+            }
+
+            .navBar{
+
+                grid-template-rows:30px;
+            }
+
+        }
 
 
     </style>
 
-
-    <script>
-        /* When the user clicks on the button,
-        toggle between hiding and showing the dropdown content */
-
-        function setupElements() {
-            let hamburgerClicked = false;
-            var element = select('button');
-            element.touchStarted(clickedHamburger);
-            element = select("body");
-            element.touchStarted(clickedBody);
-        }
-
-
-        clickedBody = function (e) {
-            if (!hamburgerClicked && windowWidth < 700) {
-                var menuItems = document.getElementsByClassName("menuItems");
-                menuItems[0].style.display = "none";
-            }
-            hamburgerClicked = false;
-        };
-
-        function clickedHamburger() {
-            var menuItems = document.getElementsByClassName("menuItems");
-            if (menuItems[0].style.display === "grid")
-                return;
-            menuItems[0].style.display = "grid";
-            hamburgerClicked = true;
-        }
-
-        function onResize() {
-            var menuItems = document.getElementsByClassName("menuItems");
-            if (windowWidth > 700 && menuItems[0].style.display === "none") {
-
-                menuItems[0].style.display = "grid";
-            }
-        }
-
-    </script>
-
 </head>
+
 <body>
 <div class="navBar">
 
@@ -210,106 +202,123 @@
     </div>
 </div>
 
-<div class="mainContainer">
-    <div class="projectItems">
+<center>
+    <br>
+    <br>
+    <div class="mainContainer">
+        <div class="canvasContainer">
 
+            <p>
+            </p>
+            <div id="canvas"></div>
+            <br>
 
-        <a href="ProjectSketches/flappyBird/flappyBird.html" class="card">
-            <div class="card-image">
-                <figure class="image is-4by3">
-                    <img src="images/Projects/flappyBird.png" height="960" width="1280"/>
-                </figure>
-            </div>
-            <div class="card-content">
-                <p class="title is-4">AI Learns To Play Flappy Bird</p>
-                <div class="content">
-                    As a 1 day challenge I coded the game flappy bird and added an AI to learn to play the game<br>
-                    that was not a good day
-
-
-                    <br>
+            <div class="content">
+                <div id = "htmlStuff">
                 </div>
             </div>
-        </a>
+        </div>
+<!--        <div class="projectItems">-->
 
 
-        <a href="ProjectSketches/chess/chess.html" class="card">
-            <div class="card-image">
-                <figure class="image is-4by3">
-                    <img src="images/Projects/chess.png" height="960" width="1280"/>
-                </figure>
-            </div>
-            <div class="card-content">
-                <p class="title is-4">Chess AI</p>
-                <div class="content">
-
-                    Using Minimax I created an AI to play chess, can you beat it? <br/>
-                    Probably because its kinda shit.
-                    <br>
-                </div>
-            </div>
-        </a>
-
-        <a href="ProjectSketches/Hill%20Climb%20Racing/hillClimbRacing.html" class="card">
-            <div class="card-image">
-                <figure class="image is-4by3">
-                    <img src="images/Projects/hillClimbRacing.png" height="960" width="1280"/>
-                </figure>
-            </div>
-            <div class="card-content">
-                <p class="title is-4">AI Learns To Play Hill Climb Racing</p>
-                <div class="content">
-
-                    Using my favourite physics engine (box2d) I created the game Hill Climb Racing.
-                    Then because that wasn't enough punishment, I used NEAT to teach AIs to play this game.
-                    <br>
-                    Also F@#KIN GRASS!!!!!!!!!!!!!
-                    <br>
-                </div>
-            </div>
-        </a>
+<!--            <a href="ProjectSketches/flappyBird/flappyBird.html" class="card">-->
+<!--                <div class="card-image">-->
+<!--                    <figure class="image is-4by3">-->
+<!--                        <img src="images/Projects/flappyBird.png" height="960" width="1280"/>-->
+<!--                    </figure>-->
+<!--                </div>-->
+<!--                <div class="card-content">-->
+<!--                    <p class="title is-4">AI Learns To Play Flappy Bird</p>-->
+<!--                    <div class="content">-->
+<!--                        As a 1 day challenge I coded the game flappy bird and added an AI to learn to play the game<br>-->
+<!--                        that was not a good day-->
 
 
-        <a href="ProjectSketches/WorldsHardestGame/WHGprojects.html" class="card">
-            <div class="card-image">
-                <figure class="image is-4by3">
-                    <img src="images/Projects/worldsHardestGame.png" height="960" width="1280"/>
-                </figure>
-            </div>
-            <div class="card-content">
-                <p class="title is-4">AI Learns To Play The Worlds Hardest Game</p>
-                <div class="content">
-                    Some say that this game isn't actually the worlds hardest game. And while that's undeniably true,
-                    it makes for one hell of a clickbaity title
-
-                    <br>
-                </div>
-            </div>
-        </a>
+<!--                        <br>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </a>-->
 
 
-        <a href="ProjectSketches/MarbleCalculator/MarbleCalculator.html" class="card">
-            <div class="card-image">
-                <figure class="image is-4by3">
-                    <img src="images/Projects/marbleCalculator.png" height="960" width="1280"/>
-                </figure>
-            </div>
-            <div class="card-content">
-                <p class="title is-4">Creating A Calculator Using Only Marbles</p>
-                <div class="content">
-                    <i>Hey Evan I don't like my calculator, it's way too fast and reliable, can you help me out?</i><br>
+<!--            <a href="ProjectSketches/chess/chess.html" class="card">-->
+<!--                <div class="card-image">-->
+<!--                    <figure class="image is-4by3">-->
+<!--                        <img src="images/Projects/chess.png" height="960" width="1280"/>-->
+<!--                    </figure>-->
+<!--                </div>-->
+<!--                <div class="card-content">-->
+<!--                    <p class="title is-4">Chess AI</p>-->
+<!--                    <div class="content">-->
+
+<!--                        Using Minimax I created an AI to play chess, can you beat it? <br/>-->
+<!--                        Probably because its kinda shit.-->
+<!--                        <br>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </a>-->
+
+<!--            <a href="ProjectSketches/Hill%20Climb%20Racing/hillClimbRacing.html" class="card">-->
+<!--                <div class="card-image">-->
+<!--                    <figure class="image is-4by3">-->
+<!--                        <img src="images/Projects/hillClimbRacing.png" height="960" width="1280"/>-->
+<!--                    </figure>-->
+<!--                </div>-->
+<!--                <div class="card-content">-->
+<!--                    <p class="title is-4">AI Learns To Play Hill Climb Racing</p>-->
+<!--                    <div class="content">-->
+
+<!--                        Using my favourite physics engine (box2d) I created the game Hill Climb Racing.-->
+<!--                        Then because that wasn't enough punishment, I used NEAT to teach AIs to play this game.-->
+<!--                        <br>-->
+<!--                        Also F@#KIN GRASS!!!!!!!!!!!!!-->
+<!--                        <br>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </a>-->
 
 
-                    <br>
-                </div>
-            </div>
-        </a>
+<!--            <a href="ProjectSketches/WorldsHardestGame/WHGprojects.html" class="card">-->
+<!--                <div class="card-image">-->
+<!--                    <figure class="image is-4by3">-->
+<!--                        <img src="images/Projects/worldsHardestGame.png" height="960" width="1280"/>-->
+<!--                    </figure>-->
+<!--                </div>-->
+<!--                <div class="card-content">-->
+<!--                    <p class="title is-4">AI Learns To Play The Worlds Hardest Game</p>-->
+<!--                    <div class="content">-->
+<!--                        Some say that this game isn't actually the worlds hardest game. And while that's undeniably true,-->
+<!--                        it makes for one hell of a clickbaity title-->
+
+<!--                        <br>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </a>-->
+
+
+<!--            <a href="ProjectSketches/MarbleCalculator/MarbleCalculator.html" class="card">-->
+<!--                <div class="card-image">-->
+<!--                    <figure class="image is-4by3">-->
+<!--                        <img src="images/Projects/marbleCalculator.png" height="960" width="1280"/>-->
+<!--                    </figure>-->
+<!--                </div>-->
+<!--                <div class="card-content">-->
+<!--                    <p class="title is-4">Creating A Calculator Using Only Marbles</p>-->
+<!--                    <div class="content">-->
+<!--                        <i>Hey Evan I don't like my calculator, it's way too fast and reliable, can you help me out?</i><br>-->
+
+
+<!--                        <br>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </a>-->
+
+<!--        </div>-->
+
+
 
     </div>
 
 
-</div>
-
-
+</center>
 </body>
 </html>
