@@ -573,7 +573,9 @@ function draw() {
 
   }
   if(!pause) {
+    print(engine);
     Engine.update(engine);
+
   }
 
   showEverything();

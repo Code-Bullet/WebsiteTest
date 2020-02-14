@@ -2,17 +2,17 @@ class Dot {
     constructor() {
         this.visible = true;
         this.opacity = 255;
-        this.pos = createVector((canvas.width / 2), (canvas.height / 2));
+        this.pos = createVector(random(canvas.width), random(canvas.height));
 
         this.target;
         this.vel = createVector();
 
         this.reached = false;
-        this.r = 60;
-        this.g = 60;
+        this.r = 20;
+        this.g = 20;
 
 
-        this.b = 60;
+        this.b = 20;
         this.targetSet = false;
         this.targetR = 0;
         this.targetG = 0;
@@ -31,13 +31,12 @@ class Dot {
 
     }
 
-    setTarget(targetX, targetY, targetR, targetG, targetB) {
+    setTarget(targetX, targetY, targetR, targetG, targetB, firstTarget) {
 
         if (targetX % 20 === 0)
             this.visible = false;
         else
             this.visible = true;
-        this.opacity = 255;
         if (finishFromLeft) {
             this.speed = map(targetX, 0, canvas.width, 0.02, 0.015);
         } else {
@@ -48,10 +47,17 @@ class Dot {
         this.expectedTime = 1 / this.speed;
 
 
+
         if (startFromLeft)
             this.waitCount = map(this.pos.x, 0, canvas.width, 0, 15);
         else
             this.waitCount = map(this.pos.x, 0, canvas.width, 15, 0);
+
+
+        //if this is the first target
+        if(!this.target){
+            this.waitCount=0;
+        }
         this.expectedTime -=this.waitCount;
         this.speed = 1/this.expectedTime;
         this.waitCount += Math.floor(random(5));

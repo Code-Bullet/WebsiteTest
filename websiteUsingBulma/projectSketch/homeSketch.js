@@ -1,10 +1,8 @@
-var targetImage;
-var targetImages = [];
 var first = true;
 var count = 0;
 
 var dots = [];
-var imageNo = 0;
+var projectNo = 0;
 var reachCount = 30;
 
 
@@ -18,27 +16,67 @@ let frameRateRatio = 1;
 
 
 let startFromLeft = false;
-let finishFromLeft = true;
+let finishFromLeft = false;
 let superSpeed = false;
 
 let imagehref = [];
-
+let projectDescriptions = [];
 
 let scaleAmount = 10;
+
+
+let projects = [];
+
 function preload() {
 
 
-    targetImages.push(loadImage("projectSketch/images/flappyBird.png"));
-    targetImages.push(loadImage("projectSketch/images/worldsHardestGame.png"));
-    targetImages.push(loadImage("projectSketch/images/hillClimbRacing.png"));
-    targetImages.push(loadImage("projectSketch/images/chess.png"));
-    targetImages.push(loadImage("projectSketch/images/marbleCalculator.png"));
+    let creatureCreator = {
+        image: loadImage("projectSketch/images/creatureCreator.png"),
+        href: "ProjectSketches/Creature%20Creator/creatureCreator.html",
+        description: ["Creature Creator",
+            "Create whatever creature your heart desires and then WATCH IT BURN",
+            "They also learn to walk and stuff"]
+    };
 
-    imagehref.push("ProjectSketches/flappyBird/flappyBird.html");
-    imagehref.push("ProjectSketches/WorldsHardestGame/WHGprojects.html");
-    imagehref.push("ProjectSketches/Hill%20Climb%20Racing/hillClimbRacing.html");
-    imagehref.push("ProjectSketches/chess/chess.html");
-    imagehref.push("ProjectSketches/MarbleCalculator/MarbleCalculator.html");
+    let flappyBird = {
+        image: loadImage("projectSketch/images/flappyBird.png"),
+        href: "ProjectSketches/flappyBird/flappyBird.html",
+        description: ["AI Learns To Play Flappy Bird",
+            "As a 1 day challenge I coded the game flappy bird and then slapped on some AI to play it",
+            "that was not a good day"]
+    };
+
+    let worldsHardestGame = {
+        image: loadImage("projectSketch/images/worldsHardestGame.png"),
+        href: "ProjectSketches/WorldsHardestGame/WHGprojects.html",
+        description: ["AI Learns To Play The Worlds Hardest Game",
+            "Some say that this game isn't actually the worlds hardest game. And while that's undeniably true,",
+            "it makes for one hell of a clickbaity title"]
+    };
+
+    let hillClimbRacing = {
+        image: loadImage("projectSketch/images/hillClimbRacing.png"),
+        href: "ProjectSketches/Hill%20Climb%20Racing/hillClimbRacing.html",
+        description: ["AI Learns To Play Hill Climb Racing",
+            "Using my favourite physics engine (box2d) I created the game Hill Climb Racing.",
+            "Then because that wasn't enough punishment, I used NEAT to teach AIs to play this game."]
+    };
+    let chess = {
+        image: loadImage("projectSketch/images/chess.png"),
+        href: "ProjectSketches/chess/chess.html",
+        description: ["Chess AI",
+            "Using Minimax I created an AI to play chess, can you beat it?",
+            "Probably because its kinda shit."]
+    };
+    let marbleCalculator = {
+        image: loadImage("projectSketch/images/marbleCalculator.png"),
+        href: "ProjectSketches/MarbleCalculator/MarbleCalculator.html",
+        description: ["Creating A Calculator Using Only Marbles",
+            "Hey Evan I don't like my calculator, it's way too fast and reliable, can you help me out?",
+            "yes"]
+    };
+
+    projects.push(creatureCreator, flappyBird, worldsHardestGame, hillClimbRacing, chess, marbleCalculator);
 
 }
 
@@ -125,23 +163,21 @@ function setup() {
     }
     setTargetsForNextImage();
 
-
-    print(windowWidth, windowHeight)
 }
 
 function nextImage() {
-    imageNo++;
-    if (imageNo >= targetImages.length) {
-        imageNo = 0;
+    projectNo++;
+    if (projectNo >= projects.length) {
+        projectNo = 0;
     }
     setTargetsForNextImage();
 
 }
 
 function previousImage() {
-    imageNo--;
-    if (imageNo < 0) {
-        imageNo = targetImages.length - 1;
+    projectNo--;
+    if (projectNo < 0) {
+        projectNo = projects.length - 1;
     }
     setTargetsForNextImage();
 
@@ -149,18 +185,18 @@ function previousImage() {
 
 function setTargetsForNextImage() {
 
-
-    targetImages[imageNo].loadPixels();
-    let scaleAmount = this.canvas.width / targetImages[imageNo].width;
+    let newImage = projects[projectNo].image;
+    newImage.loadPixels();
+    let scaleAmount = this.canvas.width / newImage.width;
     this.roundedScale = Math.floor(scaleAmount / 2) * 2;
 
     let arrowPositions = [...LArrowPositions, ...RArrowPositions];
-    for (var y = 0; y < targetImages[imageNo].height; y++) {
-        for (var x = 0; x < targetImages[imageNo].width; x++) {
-            var index = (x + y * targetImages[imageNo].width) * 4;
-            let r = targetImages[imageNo].pixels[index];
-            let g = targetImages[imageNo].pixels[index + 1];
-            let b = targetImages[imageNo].pixels[index + 2];
+    for (var y = 0; y < newImage.height; y++) {
+        for (var x = 0; x < newImage.width; x++) {
+            var index = (x + y * newImage.width) * 4;
+            let r = newImage.pixels[index];
+            let g = newImage.pixels[index + 1];
+            let b = newImage.pixels[index + 2];
 
 
             for (let pos of arrowPositions) {
@@ -187,13 +223,7 @@ function setTargetsForNextImage() {
         dot.setTarget(tempTarget.x, tempTarget.y, tempTarget.r, tempTarget.g, tempTarget.b);
     }
 
-
-    // if (finishFromLeft)
     dots.sort((a, b) => b.target.x - a.target.x);
-    //else
-    //  dots.sort((a, b) => a.target.x - b.target.x);
-
-
 }
 
 let showing;
@@ -211,18 +241,24 @@ function draw() {
 
 
     if (allReached) {//if they have then wait a bit mate (dont show anything)
-        drawMesh();
+        //drawMesh();
         superSpeed = false;
     } else {//if some dots have yet to reach their destination then show them all
 
 
         showing = totalDots;
-        if (superSpeed) {
-            frameRateRatio = 120 / frameRate();
-        } else {
-            frameRateRatio = 20 / frameRate();
+        if (frameRate() > 0) {
 
+            if (superSpeed) {
+                frameRateRatio = 120 / frameRate();
+            } else {
+                frameRateRatio = 20 / frameRate();
+
+            }
+        } else {
+            frameRateRatio = 1;
         }
+
 
         //instead Of Drawing Background draw a rectangle to the max unreached x
         //that way instead of having to redraw the dots just redraw the x
@@ -263,68 +299,83 @@ function draw() {
 
     }
 
-    if (allReached && mouseOverFrame() && mouseX > canvas.width - 7*scaleAmount) {
-        if (!onRight) {
-            background(60);
-            for (let d of dots) {
-                d.show(0, 2000);
-            }
+    if (allReached && mouseOverFrame()) {
 
-            noStroke();
-            fill(255, 200);
-            rect(canvas.width - 7*scaleAmount, 0, 7*scaleAmount, canvas.height);
-            drawMesh();
+        if (mouseX > canvas.width - 7 * scaleAmount) {
+            if (!onRight) {
+                background(20);
+                for (let d of dots) {
+                    d.show(0, 2000);
+                }
 
-            for (let pos of RArrowPositions) {
-                fill(120);
                 noStroke();
-                rect(pos.x * scaleAmount + 1, pos.y * scaleAmount + 1, scaleAmount - 2, scaleAmount - 2);
+                fill(255, 200);
+                rect(canvas.width - 7 * scaleAmount, 0, 7 * scaleAmount, canvas.height);
+                drawMesh();
 
+                for (let pos of RArrowPositions) {
+                    fill(120);
+                    noStroke();
+                    rect(pos.x * scaleAmount + 1, pos.y * scaleAmount + 1, scaleAmount - 2, scaleAmount - 2);
+
+
+                }
 
             }
+            onRight = true;
+            onLeft = false;
+        } else if (mouseX < 7 * scaleAmount) {
+            if (!onLeft) {
+                background(20);
+                for (let d of dots) {
+                    d.show(0, 2000);
+                }
 
-        }
-        onRight = true;
-    } else {
-        if (onRight) {
-            background(60);
-            for (let d of dots) {
-                d.show(0, 2000);
-            }
-        }
-        onRight = false;
-    }
-
-    if (allReached && mouseOverFrame() && mouseX <  7*scaleAmount) {
-        if (!onLeft) {
-            background(60);
-            for (let d of dots) {
-                d.show(0, 2000);
-            }
-
-            noStroke();
-            fill(255, 200);
-            rect(0, 0,  7*scaleAmount, canvas.height);
-            drawMesh();
-
-            for (let pos of LArrowPositions) {
-                fill(120);
                 noStroke();
-                rect(pos.x * scaleAmount + 1, pos.y * scaleAmount + 1, scaleAmount - 2, scaleAmount - 2);
+                fill(255, 200);
+                rect(0, 0, 7 * scaleAmount, canvas.height);
+                drawMesh();
 
+                for (let pos of LArrowPositions) {
+                    fill(120);
+                    noStroke();
+                    rect(pos.x * scaleAmount + 1, pos.y * scaleAmount + 1, scaleAmount - 2, scaleAmount - 2);
+
+
+                }
 
             }
-
+            onLeft = true;
+            onRight = false;
+        } else {
+            //if the player was just on the left or on the right button
+            if (onLeft || onRight || !onScreen) {
+                //draw the scene without highlighting the buttons
+                background(20);
+                for (let d of dots) {
+                    d.show(0, 2000);
+                }
+                //also show the poject information
+                showProjectInfo();
+                onScreen = true;
+            }
+            onLeft = false;
+            onRight = false;
         }
-        onLeft = true;
+
+
     } else {
-        if (onLeft) {
-            background(60);
+        if (onScreen || onLeft || onRight) {
+            //draw the scene without highlighting the buttons
+            background(20);
             for (let d of dots) {
                 d.show(0, 2000);
             }
+
         }
         onLeft = false;
+        onRight = false;
+        onScreen = false;
     }
 
 
@@ -338,6 +389,7 @@ function draw() {
 
 let onRight = false;
 let onLeft = false;
+let onScreen = false;
 
 function dotsAreWaiting() {
     for (let dot of dots) {
@@ -400,12 +452,12 @@ function mouseOverFrame() {
 function mousePressed() {
     if (mouseOverFrame()) {
 
-        if (mouseX > canvas.width - 7*scaleAmount) {
+        if (mouseX > canvas.width - 7 * scaleAmount) {
             moveRight();
             return;
         }
 
-        if (mouseX < 7*scaleAmount) {
+        if (mouseX < 7 * scaleAmount) {
 
             moveLeft();
             return;
@@ -421,7 +473,7 @@ function mousePressed() {
             superSpeed = true;
             return;
         }
-        window.location.href = imagehref[imageNo];
+        window.location.href = projects[projectNo].href;
     }
 
 
@@ -461,3 +513,27 @@ function moveRight() {
     nextImage();
 }
 
+
+function showProjectInfo() {
+    fill(255, 220);
+    let topOfRect = canvas.height * 5 / 6;
+
+    rect(0, topOfRect, canvas.width, canvas.height);
+
+    noStroke();
+    fill(20);
+    stroke(20);
+    strokeWeight(1);
+    textAlign(CENTER, CENTER);
+    scaleAmount === 10 ? textSize(50): textSize(40);
+    text(projects[projectNo].description[0], canvas.width / 2, topOfRect + scaleAmount * 4);
+
+    textSize(25);
+    scaleAmount === 10 ? textSize(25): textSize(18);
+
+    for (let i = 1; i < projects[projectNo].description.length; i++) {
+        text(projects[projectNo].description[i], canvas.width / 2, topOfRect + scaleAmount * (5 + 4 * i));
+    }
+
+
+}

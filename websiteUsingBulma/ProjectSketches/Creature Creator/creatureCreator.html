@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.0/css/bulma.min.css">
+    <!--    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css"
+          integrity="sha256-gsmEoJAws/Kd3CjuOQzLie5Q3yshhvmo7YNtBG7aaEY=" crossorigin="anonymous">
+
+    <!--    from libraries-->
+    <script language="javascript" type="text/javascript" src="libraries/p5.js"></script>
+    <script language="javascript" src="libraries/p5.dom.js"></script>
+    <script language="javascript" src="libraries/p5.sound.js"></script>
+    <script language="javascript" type="text/javascript" src="libraries/Box2D.js"></script>
+
+
+    <!--    Used by both sections-->
+
+
+    <script language="javascript" type="text/javascript" src="sketch.js"></script>
+
+    <script language="javascript" type="text/javascript" src="Body.js"></script>
+    <script language="javascript" type="text/javascript" src="Joints.js"></script>
+    <script language="javascript" type="text/javascript" src="Fixtures.js"></script>
+    <script language="javascript" type="text/javascript" src="CompoundFixture.js"></script>
+
+    <script language="javascript" type="text/javascript" src="Box2dGlobals.js"></script>
+
+   <!-- from creature creator-->
+    <script language="javascript" type="text/javascript" src="Creature%20creator/Warning.js"></script>
+    <script language="javascript" type="text/javascript" src="Creature%20creator/Instruction.js"></script>
+    <script language="javascript" type="text/javascript" src="Creature%20creator/Button.js"></script>
+    <script language="javascript" type="text/javascript" src="Creature%20creator/sketch.js"></script>
+    <script language="javascript" type="text/javascript" src="Creature%20creator/MouseJoint.js"></script>
+    <script language="javascript" type="text/javascript" src="Creature%20creator/ButtonManager.js"></script>
+    <script language="javascript" type="text/javascript" src="Creature%20creator/Creature.js"></script>
+    <script language="javascript" type="text/javascript" src="Creature%20creator/World.js"></script>
+    <script language="javascript" type="text/javascript" src="Creature%20creator/HotBar.js"></script>
+    <script language="javascript" type="text/javascript" src="Creature%20creator/BodyImage.js"></script>
+    <script language="javascript" type="text/javascript" src="Creature%20creator/CommonColorsArray.js"></script>
+
+    <!--    From AI Learns to walk-->
+    <script language="javascript" type="text/javascript" src="AI%20learns%20to%20walk/ConnectionGene.js"></script>
+    <script language="javascript" type="text/javascript" src="AI%20learns%20to%20walk/ConnectionHistory.js"></script>
+    <script language="javascript" type="text/javascript" src="AI%20learns%20to%20walk/genome.js"></script>
+    <script language="javascript" type="text/javascript" src="AI%20learns%20to%20walk/Node.js"></script>
+    <script language="javascript" type="text/javascript" src="AI%20learns%20to%20walk/Player.js"></script>
+    <script language="javascript" type="text/javascript" src="AI%20learns%20to%20walk/Population.js"></script>
+    <script language="javascript" type="text/javascript" src="AI%20learns%20to%20walk/sketch.js"></script>
+    <script language="javascript" type="text/javascript" src="AI%20learns%20to%20walk/Species.js"></script>
+
+
+
+    <!------------------------------------------------------------BUTTONS------------------------------------------------------------->
+    <!--    universal Buttons-->
+    <script language="javascript" type="text/javascript" src="Creature%20creator/ButtonCreationMethods/EvolveButton.js"></script>
+    <script language="javascript" type="text/javascript" src="Creature%20creator/ButtonCreationMethods/CosmeticsButton.js"></script>
+    <script language="javascript" type="text/javascript" src="Creature%20creator/ButtonCreationMethods/PlayPauseButton.js"></script>
+    <script language="javascript" type="text/javascript" src="Creature%20creator/ButtonCreationMethods/StopButton.js"></script>
+    <script language="javascript" type="text/javascript" src="Creature%20creator/ButtonCreationMethods/ConstructionButton.js"></script>
+
+
+    <!--    default buttons-->
+    <script language="javascript" type="text/javascript" src="Creature%20creator/ButtonCreationMethods/DefaultButtons/AddCircleButton.js"></script>
+    <script language="javascript" type="text/javascript" src="Creature%20creator/ButtonCreationMethods/DefaultButtons/AddJointButton.js"></script>
+    <script language="javascript" type="text/javascript" src="Creature%20creator/ButtonCreationMethods/DefaultButtons/AddPolygonButton.js"></script>
+    <script language="javascript" type="text/javascript" src="Creature%20creator/ButtonCreationMethods/DefaultButtons/AdvancedButton.js"></script>
+    <script language="javascript" type="text/javascript" src="Creature%20creator/ButtonCreationMethods/DefaultButtons/AddRectangleButton.js"></script>
+    <script language="javascript" type="text/javascript" src="Creature%20creator/ButtonCreationMethods/DefaultButtons/CloneShapeButton.js"></script>
+    <script language="javascript" type="text/javascript" src="Creature%20creator/ButtonCreationMethods/DefaultButtons/FuseShapesButton.js"></script>
+    <script language="javascript" type="text/javascript" src="Creature%20creator/ButtonCreationMethods/DefaultButtons/MoveRotateButton.js"></script>
+    <script language="javascript" type="text/javascript" src="Creature%20creator/ButtonCreationMethods/DefaultButtons/MoveResizeButton.js"></script>
+    <script language="javascript" type="text/javascript" src="Creature%20creator/ButtonCreationMethods/DefaultButtons/DeleteButton.js"></script>
+
+
+    <!--    Advanced Buttons-->
+    <script language="javascript" type="text/javascript" src="Creature%20creator/ButtonCreationMethods/AdvancedButtons/BasicOptionsButton.js"></script>
+    <script language="javascript" type="text/javascript" src="Creature%20creator/ButtonCreationMethods/AdvancedButtons/DeathUponFloorButton.js"></script>
+    <script language="javascript" type="text/javascript" src="Creature%20creator/ButtonCreationMethods/AdvancedButtons/EditShapeLayersButton.js"></script>
+    <script language="javascript" type="text/javascript" src="Creature%20creator/ButtonCreationMethods/AdvancedButtons/LimitJointsButton.js"></script>
+    <script language="javascript" type="text/javascript" src="Creature%20creator/ButtonCreationMethods/AdvancedButtons/ShapeCollisionsButton.js"></script>
+    <script language="javascript" type="text/javascript" src="Creature%20creator/ButtonCreationMethods/AdvancedButtons/AllowBodyCollisionsToggleButton.js"></script>
+    <script language="javascript" type="text/javascript" src="Creature%20creator/ButtonCreationMethods/AdvancedButtons/ShowJointLimitsToggleButton.js"></script>
+
+<!--    Cosmetics Buttons-->
+    <script language="javascript" type="text/javascript" src="Creature%20creator/ButtonCreationMethods/CosmeticButtons/AddImagesToShapeButton.js"></script>
+    <script language="javascript" type="text/javascript" src="Creature%20creator/ButtonCreationMethods/CosmeticButtons/MoveResizeImageButton.js"></script>
+    <script language="javascript" type="text/javascript" src="Creature%20creator/ButtonCreationMethods/CosmeticButtons/MoveRotateImageButton.js"></script>
+    <script language="javascript" type="text/javascript" src="Creature%20creator/ButtonCreationMethods/CosmeticButtons/DeleteImageButton.js"></script>
+    <script language="javascript" type="text/javascript" src="Creature%20creator/ButtonCreationMethods/CosmeticButtons/ChangeFillColorButton.js"></script>
+
+
+    <!--    Learning Buttons-->
+    <script language="javascript" type="text/javascript" src="Creature%20creator/ButtonCreationMethods/LearningButtons/DeathLazerSpeedValueButton.js"></script>
+    <script language="javascript" type="text/javascript" src="Creature%20creator/ButtonCreationMethods/LearningButtons/PopulationSizeValueButton.js"></script>
+    <script language="javascript" type="text/javascript" src="Creature%20creator/ButtonCreationMethods/LearningButtons/SimulationSpeedValueButton.js"></script>
+    <script language="javascript" type="text/javascript" src="Creature%20creator/ButtonCreationMethods/LearningButtons/EditCreatureButton.js"></script>
+    <script language="javascript" type="text/javascript" src="Creature%20creator/ButtonCreationMethods/LearningButtons/MuteButton.js"></script>
+    <script language="javascript" type="text/javascript" src="Creature%20creator/ButtonCreationMethods/LearningButtons/NumberOfBatchesValueButton.js"></script>
+    <script language="javascript" type="text/javascript" src="Creature%20creator/ButtonCreationMethods/LearningButtons/SpeedUpWhenPlayersDieToggleButton.js"></script>
+    <script language="javascript" type="text/javascript" src="Creature%20creator/ButtonCreationMethods/LearningButtons/ReplayEvolutionHighlightsButton.js"></script>
+    <script language="javascript" type="text/javascript" src="Creature%20creator/ButtonCreationMethods/LearningButtons/ReplayPopularSpeciesButton.js"></script>
+
+
+
+
+<!--<script language="javascript" type="text/javascript" src="../../libraries/p5.js"></script>-->
+<!--<script language="javascript" src="../../libraries/p5.dom.js"></script>-->
+<!--<script language="javascript" src="../../libraries/p5.sound.js"></script>-->
+<!--<script language="javascript" type="text/javascript" src="sketch.js"></script>-->
+
+
+
+
+<link rel="stylesheet" href="../../styles/navBarStyle.css">
+
+<style>
+    body, html{
+        height:100%;
+        margin:0;
+
+
+    }
+    .mainContainer{
+        display: grid;
+        grid-template-columns: 1fr 5fr 1fr;
+
+    }
+
+    .canvasContainer{
+        grid-column: 2;
+        background: white;
+        padding:1em 1em 1em 1em;
+        align-self: center;
+        justify-self: center;
+    }
+
+
+
+
+</style>
+
+</head>
+
+<body>
+
+<div class="navBar">
+    <div class="logo">
+        <a href="../../index.html">
+            <img src="../../images/GlowingLogoWithName.png" alt="TheBigCB.com">
+
+        </a>
+    </div>
+
+    <div class="menuItems">
+        <div>
+            <a href="../../index.html">Home</a>
+        </div>
+        <div>
+            <a href="../../projects.html">Projects</a>
+
+        </div>
+        <div>
+            <a href="../../merch.html">Merch</a>
+
+        </div>
+        <div>
+            <a href="../../About.html">About</a>
+
+        </div>
+
+    </div>
+    <button class="hamburgerButton" onclick="">
+        <i class="fa fa-bars" style="font-size:24px;color:white"></i>
+    </button>
+
+    <div class="socials">
+        <div>
+            <a href="https://www.youtube.com/channel/UC0e3QhIYukixgh5VVpKHH9Q">
+                <div class="tooltip">
+                    <i class="fa fa-youtube-play" style="font-size:24px;color:white"></i>
+                    <span class="tooltiptext">YouTube</span>
+                </div>
+            </a>
+        </div>
+        <div>
+            <a href="https://twitter.com/code_bullet">
+                <div class="tooltip">
+                    <i class="fa fa-twitter" style="font-size:24px;color:white"></i>
+                    <span class="tooltiptext">Twitter</span>
+                </div>
+            </a>
+        </div>
+        <div>
+            <a href="https://discord.gg/qda75m8">
+                <div class="tooltip">
+                    <i class="fa fa-discord" style="font-size:24px;color:white"></i>
+                    <span class="tooltiptext">Discord</span>
+                </div>
+            </a>
+        </div>
+        <div>
+            <a href="https://www.patreon.com/CodeBullet">
+                <div class="tooltip">
+                    <i class="fa fa-patreon" style="font-size:24px;color:white"></i>
+                    <span class="tooltiptext">Patreon</span>
+                </div>
+            </a>
+        </div>
+        <div>
+            <a href="https://github.com/Code-Bullet">
+                <div class="tooltip">
+                    <i class="fa fa-github" style="font-size:24px;color:white"></i>
+                    <span class="tooltiptext">GitHub</span>
+                </div>
+            </a>
+        </div>
+    </div>
+
+</div>
+<center>
+    <br>
+    <br>
+    <div class="mainContainer">
+        <div class="canvasContainer">
+
+            <div id="canvas"></div>
+
+
+
+        </div>
+    </div>
+
+
+</center>
+</body>
+</html>
+
+
+
+
+
+</body>
+</html>
